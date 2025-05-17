@@ -1626,22 +1626,70 @@ document.addEventListener('DOMContentLoaded', function() {
         x: ponto.meses,
         y: ponto.visitasAno,
         type: 'bar',
-        marker: { color: '#1A4C76' }
+        marker: {
+          color: '#1A4C76',
+          line: { width: 0 },
+        },
+        hovertemplate: '<b>%{x}</b><br>Visitas: <b>%{y}</b><extra></extra>',
       }], {
-        title: 'Visitas por Mês',
-        margin: { t: 30, b: 40, l: 40, r: 20 },
-        height: 200
+        title: {
+          text: 'Visitas por Mês',
+          font: { family: 'Montserrat, Poppins, sans-serif', size: 18, color: '#1A4C76' },
+          x: 0.5,
+        },
+        margin: { t: 50, b: 50, l: 40, r: 20 },
+        height: 240,
+        plot_bgcolor: '#f8fafc',
+        paper_bgcolor: '#fff',
+        xaxis: {
+          tickfont: { family: 'Montserrat, sans-serif', size: 13, color: '#1A4C76' },
+          showgrid: false,
+          zeroline: false,
+        },
+        yaxis: {
+          tickfont: { family: 'Montserrat, sans-serif', size: 13, color: '#1A4C76' },
+          gridcolor: '#e3eaf2',
+          zeroline: false,
+        },
+        bargap: 0.25,
+        showlegend: false,
+        hoverlabel: { bgcolor: '#fff', bordercolor: '#1A4C76', font: { color: '#1A4C76', family: 'Montserrat, sans-serif' } },
+        borderRadius: 12,
       });
 
       Plotly.newPlot(graficoSemanaId, [{
         x: ponto.dias,
         y: ponto.visitasSemana,
         type: 'bar',
-        marker: { color: '#2980b9' }
+        marker: {
+          color: '#2980b9',
+          line: { width: 0 },
+        },
+        hovertemplate: '<b>%{x}</b><br>Visitas: <b>%{y}</b><extra></extra>',
       }], {
-        title: 'Visitas por Dia da Semana',
-        margin: { t: 30, b: 40, l: 40, r: 20 },
-        height: 200
+        title: {
+          text: 'Visitas por Dia da Semana',
+          font: { family: 'Montserrat, Poppins, sans-serif', size: 18, color: '#2980b9' },
+          x: 0.5,
+        },
+        margin: { t: 50, b: 50, l: 40, r: 20 },
+        height: 240,
+        plot_bgcolor: '#f8fafc',
+        paper_bgcolor: '#fff',
+        xaxis: {
+          tickfont: { family: 'Montserrat, sans-serif', size: 13, color: '#2980b9' },
+          showgrid: false,
+          zeroline: false,
+        },
+        yaxis: {
+          tickfont: { family: 'Montserrat, sans-serif', size: 13, color: '#2980b9' },
+          gridcolor: '#e3eaf2',
+          zeroline: false,
+        },
+        bargap: 0.25,
+        showlegend: false,
+        hoverlabel: { bgcolor: '#fff', bordercolor: '#2980b9', font: { color: '#2980b9', family: 'Montserrat, sans-serif' } },
+        borderRadius: 12,
       });
     }, 100);
 
