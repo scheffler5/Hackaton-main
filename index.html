@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fozzytour | Seu guia 24h em Foz do Iguaçu</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --font-size-sm: 0.875rem;    /* 14px */
+      --font-size-base: 1rem;      /* 16px */
+      --font-size-lg: 1.25rem;     /* 20px */
+      --font-size-xl: 2rem;        /* 32px */
+      --transition-fast: 0.2s;
+      --transition-normal: 0.3s;
+      --transition-slow: 0.5s;
+      --bounce-timing: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html, body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      font-size: var(--font-size-base);
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+    
+    .site-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #1A4C76 0%, #2980b9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+    }
+    
+    h2 {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+    }
+    
+    h3 {
+      font-size: var(--font-size-base);
+      font-weight: 600;
+    }
+    
+    p, span {
+      font-size: var(--font-size-base);
+      font-weight: normal;
+    }
+    
+    .text-small {
+      font-size: var(--font-size-sm);
+    }
+    
+    /* Seletor de idioma estilizado */
+    .language-selector {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .language-button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .language-button:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateY(-1px);
+    }
+    
+    .language-dropdown {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      width: 180px;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      z-index: 100;
+    }
+    
+    .language-dropdown.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    
+    .language-option {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .language-option:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    
+    .language-option.active {
+      background-color: rgba(26, 76, 118, 0.08);
+      font-weight: 500;
+    }
+    
+    .flag-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Redesenho dos cards e botões */
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .primary-button {
+      background: linear-gradient(135deg, #1A4C76 0%, #2980b9 100%);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(26, 76, 118, 0.25);
+      transition: all 0.3s ease;
+    }
+    
+    .primary-button:hover {
+      box-shadow: 0 6px 20px rgba(26, 76, 118, 0.35);
+      transform: translateY(-2px);
+    }
+    
+    .secondary-button {
+      background: rgba(26, 76, 118, 0.1);
+      color: #1A4C76;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    
+    .secondary-button:hover {
+      background: rgba(26, 76, 118, 0.2);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, #1A4C76, #2980b9);
+      border-radius: 3px;
+    }
+    
+    /* Ícones de benefícios */
+    .benefit-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .benefit-icon {
+      color: #1A4C76;
+      flex-shrink: 0;
+    }
+    
+    /* Melhorar as imagens circulares */
+    .feature-circle {
+      background: linear-gradient(135deg, #f8fafc 0%, #ebf7ff 100%);
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(26, 76, 118, 0.1);
+      border: 1px solid rgba(26, 76, 118, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-circle:hover {
+      transform: scale(1.05);
+    }
+    
+    .feature-circle img {
+      transition: transform 0.3s ease 0.1s;
+    }
+    
+    .feature-circle:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Estilo da tela de espera do chat */
+    .espera-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .loading-animation {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1.5rem;
+    }
+
+    .loading-animation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid rgba(26, 76, 118, 0.1);
+      border-top-color: #1A4C76;
+      animation: spin 1s infinite ease-in-out;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-dots {
+      display: flex;
+      gap: 6px;
+      margin: 1rem 0;
+    }
+
+    .loading-dot {
+      width: 10px;
+      height: 10px;
+      background: #1A4C76;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    .loading-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loading-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .espera-texto {
+      color: #1A4C76;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      opacity: 0.9;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .espera-texto i {
+      font-size: 1.2rem;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .espera-subtexto {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+      max-width: 280px;
+    }
+    
+    /* Novo estilo do chat */
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #ecb511 0%, #d1b32b 100%);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    
+    .chat-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .chat-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    
+    .chat-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .chat-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #000;
+    }
+    
+    .chat-status {
+      font-size: 0.8rem;
+      color: rgba(0,0,0,0.7);
+      position: relative;
+      padding-left: 14px;
+    }
+    
+    .chat-status::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+    }
+    
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background: #f8f9fb;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .message-bubble {
+      display: flex;
+      margin-bottom: 16px;
+      align-items: flex-start;
+      max-width: 90%;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #1A4C76;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    
+    .message-content {
+      background: white;
+      border-radius: 18px;
+      padding: 12px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    
+    .message-content p {
+      margin: 0 0 8px 0;
+      color: #333;
+      line-height: 1.5;
+    }
+    
+    .message-content p:last-child {
+      margin-bottom: 16px;
+    }
+    
+    .message-time {
+      position: absolute;
+      bottom: 6px;
+      right: 16px;
+      font-size: 0.75rem;
+      color: #999;
+    }
+    
+    .chat-input-area {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #eaeaea;
+    }
+    
+    .chat-input-container {
+      display: flex;
+      background: #f0f2f5;
+      border-radius: 24px;
+      padding: 8px 16px;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+    
+    .chat-input-container:focus-within {
+      box-shadow: 0 0 0 2px rgba(26, 76, 118, 0.3);
+    }
+    
+    .chat-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1rem;
+      flex: 1;
+      padding: 8px 0;
+      color: #333;
+    }
+    
+    .chat-send-btn {
+      background: #1A4C76;
+      border: none;
+      outline: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .chat-send-btn:hover {
+      background: #133c5e;
+      transform: scale(1.05);
+    }
+    
+    .chat-footer {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #999;
+    }
+
+    #close-webchat-2 {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.1);
+      border-radius: 50%;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    #close-webchat-2:hover {
+      background: rgba(0,0,0,0.2);
+      transform: scale(1.1);
+    }
+
+    /* Estilo dos Tabs */
+    .tabs-container {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    
+    .tabs-header {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      position: relative;
+    }
+    
+    .tabs-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: #1A4C76;
+      transition: all 0.3s ease;
+    }
+    
+    .tabs-header[data-active="roteiros"]::after {
+      width: 160px;
+      transform: translateX(10px);
+    }
+    
+    .tabs-header[data-active="experiencias"]::after {
+      width: 190px;
+      transform: translateX(190px);
+    }
+    
+    .tab-button {
+      padding: 15px 20px;
+      font-weight: 500;
+      color: #666;
+      transition: all 0.3s ease;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .tab-button.active {
+      color: #1A4C76;
+      font-weight: 600;
+    }
+    
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block !important; }
+    
+    /* Estilo dos Cards de Experiência - Atualizado */
+    .experience-card {
+      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+      position: relative;
+      height: 100%;
+      transform: translateY(0);
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    
+    .experience-img {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .experience-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+    
+    .experience-card:hover .experience-img img {
+      transform: scale(1.1);
+    }
+    
+    .experience-content {
+      padding: 24px;
+      position: relative;
+      background: white;
+    }
+    
+    .experience-tag {
+      position: absolute;
+      top: -15px;
+      left: 24px;
+      background: #1A4C76;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(26,76,118,0.2);
+    }
+    
+    .experience-content h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 10px 0;
+      color: #333;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .experience-content p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 1024px) {
+      .tabs-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .tab-button {
+        width: 100%;
+        justify-content: flex-start;
+        border-radius: 0;
+      }
+      .tabs-header[data-active="roteiros"]::after,
+      .tabs-header[data-active="experiencias"]::after {
+        width: 100%;
+        left: 0;
+        transform: none;
+      }
+    }
+    @media (max-width: 900px) {
+      .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (max-width: 700px) {
+      .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+      }
+      .experience-img {
+        height: 160px;
+      }
+      .experience-content {
+        padding: 16px;
+      }
+      .card.p-8 {
+        padding: 18px !important;
+      }
+    }
+    @media (max-width: 500px) {
+      .tabs-container, .tabs-content, .tab-pane {
+        padding: 0 !important;
+      }
+      .experience-img {
+        height: 120px;
+      }
+      .experience-content {
+        padding: 10px;
+      }
+      .card.p-8 {
+        padding: 10px !important;
+      }
+      .section-title {
+        font-size: 1.1rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      :root {
+        --font-size-xl: 1.5rem;    /* 24px */
+        --font-size-lg: 1.125rem;  /* 18px */
+      }
+    }
+
+    /* Animação do botão de chat web */
+    #open-webchat {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      background: rgba(26, 76, 118, 0.9);
+      color: white;
+      transform-origin: center;
+    }
+
+    #open-webchat::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    #open-webchat:hover {
+      transform: translateY(-2px) scale(1.02);
+      background: rgba(26, 76, 118, 1);
+      box-shadow: 0 4px 15px rgba(26,76,118,0.3);
+    }
+
+    #open-webchat:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    #open-webchat i {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    #open-webchat:hover i {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    @keyframes pulseChat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    #open-webchat.pulse {
+      animation: pulseChat 2s infinite;
+    }
+
+    /* Animações Base */
+    .animate-hover {
+      transition: all var(--transition-normal) var(--ease-timing);
+    }
+
+    .animate-hover:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Animações de Botões */
+    .btn-primary, .btn-secondary, #open-webchat, .language-button, .experience-btn, 
+    .tab-button, .chat-send-btn {
+      transition: all var(--transition-normal) var(--ease-timing);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::after, .btn-secondary::after, #open-webchat::after, 
+    .language-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: transform var(--transition-slow) ease, opacity var(--transition-normal) ease;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover, #open-webchat:hover, 
+    .language-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(26,76,118,0.3);
+    }
+
+    .btn-primary:hover::after, .btn-secondary:hover::after, 
+    #open-webchat:hover::after, .language-button:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    /* Animações de Cards */
+    .experience-card, .card {
+      transition: all var(--transition-normal) var(--bounce-timing);
+    }
+
+    .experience-card:hover, .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .experience-img img {
+      transition: transform var(--transition-slow) ease;
+    }
+
+    .experience-card:hover .experience-img img {
+      transform: scale(1.1);
+    }
+
+    /* Animações de Ícones */
+    .btn-primary i, .btn-secondary i, #open-webchat i, 
+    .benefit-icon, .feature-circle {
+      transition: transform var(--transition-normal) var(--bounce-timing);
+      display: inline-block;
+    }
+
+    .btn-primary:hover i, .btn-secondary:hover i, #open-webchat:hover i {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .benefit-item:hover .benefit-icon {
+      transform: scale(1.2);
+      color: #1A4C76;
+    }
+
+    /* Animações de Entrada */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fade-in {
+      animation: fadeIn var(--transition-normal) ease-out;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp var(--transition-normal) ease-out;
+    }
+
+    /* Animações do Chat */
+    .chat-messages {
+      transition: all var(--transition-normal) ease;
+    }
+
+    .message-bubble {
+      animation: fadeInUp var(--transition-normal) ease-out;
+    }
+
+    .chat-input-container {
+      transition: all var(--transition-fast) ease;
+    }
+
+    .chat-input-container:focus-within {
+      transform: scale(1.01);
+      box-shadow: 0 0 0 2px rgba(26, 76, 118, 0.3);
+    }
+
+    /* Animações de Loading */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.6; }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite var(--ease-timing);
+    }
+
+    /* Animações de Hover para Links */
+    .hover-link {
+      position: relative;
+      transition: color var(--transition-fast) ease;
+    }
+
+    .hover-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform var(--transition-normal) var(--ease-timing);
+      transform-origin: right;
+    }
+
+    .hover-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Responsividade das animações */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Estilos específicos dos botões principais */
+    #hero-btn {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+    }
+
+    #hero-btn:hover {
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    #open-webchat {
+      background: rgba(26, 76, 118, 0.9);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-left: 12px;
+      box-shadow: 0 4px 15px rgba(26, 76, 118, 0.25);
+    }
+
+    #open-webchat:hover {
+      background: rgba(26, 76, 118, 1);
+      box-shadow: 0 6px 20px rgba(26, 76, 118, 0.35);
+    }
+
+    /* Ajuste nas classes base de botões */
+    .btn-primary, .btn-secondary {
+      transition: all var(--transition-normal) var(--ease-timing);
+      position: relative;
+      overflow: hidden;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary::after, .btn-secondary::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: transform var(--transition-slow) ease, opacity var(--transition-normal) ease;
+    }
+
+    .btn-primary:hover::after, .btn-secondary:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    #modal-detalhes {
+      z-index: 9999 !important;
+    }
+    .leaflet-container {
+      z-index: 1 !important;
+    }
+  </style>
+  <meta name="description" content="Fozzytour: Seu guia turístico 24h em Foz do Iguaçu. Descubra roteiros, dicas e atrações direto no WhatsApp!">
+</head>
+<body class="bg-[#fefcf7] text-[#1c2b39]">
+
+ <!-- Header -->
+<header class="flex items-center justify-between px-6 md:px-20 py-5 bg-white shadow-sm fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/95 animate-hover">
+  <h1 class="site-title fade-in">Fozzytour</h1>
+  <div class="language-selector">
+    <div id="language-button" class="language-button">
+      <img id="current-flag" src="https://flagcdn.com/w40/br.png" alt="Português" class="flag-icon">
+      <span id="current-language">Português</span>
+      <i class="fa-solid fa-chevron-down text-xs text-gray-500 ml-1"></i>
+    </div>
+    <div id="language-dropdown" class="language-dropdown">
+      <div class="language-option active" data-lang="pt">
+        <img src="https://flagcdn.com/w40/br.png" alt="Português" class="flag-icon">
+        <span>Português</span>
+      </div>
+      <div class="language-option" data-lang="en">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon">
+        <span>English</span>
+      </div>
+      <div class="language-option" data-lang="es">
+        <img src="https://flagcdn.com/w40/es.png" alt="Español" class="flag-icon">
+        <span>Español</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- Hero -->
+  <section class="relative overflow-visible bg-cover bg-center px-6 md:px-40 pt-36 pb-32 flex flex-col md:flex-row items-center justify-between" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('img/cataratas.png');">
+    <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+    <!-- Texto -->
+    <div class="md:w-1/2 text-white text-left z-10">
+      <h1 id="hero-title" class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg leading-tight">
+        Seu guia turístico 24h em Foz do Iguaçu, direto no WhatsApp
+      </h1>
+      <p id="hero-desc" class="text-lg md:text-xl mb-8 drop-shadow-sm leading-relaxed">
+        Descubra as atrações da tríplice fronteira com quem conhece tudo por aqui.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a id="hero-btn" href="https://wa.me/5599999999999" class="btn-primary">
+          <i class="fab fa-whatsapp text-lg"></i>
+          Fale com o Fozzy
+        </a>
+        <button id="open-webchat" type="button" class="btn-secondary">
+          <i class="fas fa-comments text-lg"></i>
+          Chat Web
+        </button>
+      </div>
+    </div>
+
+    <!-- Fozzy -->
+    <img src="img/fozzy.png" alt="Fozzy" class="absolute bottom-[-110px] right-[-60px] w-[300px] md:bottom-[-80px] md:right-[60px] md:w-[500px] object-contain z-10" />
+  </section>
+
+  <!-- Buscador e Mapa -->
+  <section class="px-6 md:px-20 py-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">Buscar pontos turísticos</h2>
+      <form id="busca-form" class="grid md:grid-cols-3 gap-4 mb-8">
+        <select id="tipo" class="p-3 border rounded-lg">
+          <option value="">Selecione o tipo</option>
+          <option value="restaurante">Restaurantes</option>
+          <option value="hotel">Hotéis</option>
+          <option value="parque">Parques</option>
+          <option value="teatro">Teatros</option>
+          <option value="museu">Museus</option>
+        </select>
+        <select id="nicho" class="p-3 border rounded-lg">
+          <option value="">Escolha o nicho</option>
+          <option value="vegano">Vegano</option>
+          <option value="familiar">Familiar</option>
+          <option value="romântico">Romântico</option>
+          <option value="aventura">Aventura</option>
+          <option value="cultural">Cultural</option>
+        </select>
+        <button type="submit" class="bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition">Buscar</button>
+      </form>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Lista de Resultados -->
+        <div id="resultados" class="md:col-span-1 space-y-4 max-h-[600px] overflow-y-auto pr-4" style="display:none">
+          <!-- Os resultados serão inseridos aqui via JavaScript -->
+        </div>
+        <!-- Mapa -->
+        <div id="mapa" class="md:col-span-2 h-[600px] rounded-xl shadow-lg" style="display:none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="px-6 md:px-60 py-24 bg-white text-left benefits-section">
+    <h2 id="how-title" class="text-2xl md:text-3xl font-bold mb-16 section-title">Como funciona</h2>
+    <div class="grid md:grid-cols-3 gap-12">
+      <div>
+        <div class="w-48 h-48 feature-circle flex items-center justify-center mx-auto mb-8">
+          <img src="img/chat.png" class="w-32" alt="Chat">
+        </div>
+        <p id="how-step1" class="text-2xl text-center font-medium">Você envia uma mensagem no WhatsApp</p>
+      </div>
+      <div>
+        <div class="w-48 h-48 feature-circle flex items-center justify-center mx-auto mb-8">
+          <img src="img/ilu-joia.png" class="w-32" alt="Perfil">
+        </div>
+        <p id="how-step2" class="text-2xl text-center font-medium">O Fozzy entende seu perfil de viagem</p>
+      </div>
+      <div>
+        <div class="w-48 h-48 feature-circle flex items-center justify-center mx-auto mb-8">
+          <img src="img/map.png" class="w-32" alt="Dicas">
+        </div>
+        <p id="how-step3" class="text-2xl text-center font-medium">Receba dicas, roteiros e ajuda personalizada</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section class="px-6 md:px-60 py-16 bg-gray-100 text-left">
+    <h2 id="benefits-title" class="text-2xl md:text-3xl font-bold section-title">Benefícios de usar o Fozzytour</h2>
+    <div class="max-w-3xl space-y-4 text-lg leading-relaxed">
+      <div id="benefit1" class="benefit-item animate-hover">
+        <i class="fas fa-clock benefit-icon"></i>
+        <span>Atendimento 24h</span>
+      </div>
+      <div id="benefit2" class="benefit-item animate-hover">
+        <i class="fas fa-map-marked-alt benefit-icon"></i>
+        <span>Dicas locais exclusivas</span>
+      </div>
+      <div id="benefit3" class="benefit-item animate-hover">
+        <i class="fas fa-concierge-bell benefit-icon"></i>
+        <span>Sugestões de passeios, restaurantes, compras e cultura</span>
+      </div>
+      <div id="benefit4" class="benefit-item animate-hover">
+        <i class="fas fa-mobile-alt benefit-icon"></i>
+        <span>Zero enrolação: tudo pelo WhatsApp</span>
+      </div>
+      <div id="benefit5" class="benefit-item animate-hover">
+        <i class="fas fa-gift benefit-icon"></i>
+        <span class="font-semibold">100% gratuito!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiências Personalizadas -->
+  <section class="px-6 md:px-60 py-16 bg-white text-left experiences-section">
+    <h2 class="text-2xl md:text-3xl font-bold section-title mb-8">Experiências Personalizadas</h2>
+    <div class="tabs-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="#" class="experience-card animate-hover">
+          <div class="experience-img">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Experiência em São Paulo">
+          </div>
+          <div class="experience-content">
+            <span class="experience-tag">Popular</span>
+            <h3>Descubra o centro histórico de São Paulo</h3>
+            <p>A partir de R$120 / pessoa • 4.92</p>
+          </div>
+        </a>
+        
+        <a href="#" class="experience-card animate-hover">
+          <div class="experience-img">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Show intimista">
+          </div>
+          <div class="experience-content">
+            <span class="experience-tag">Original</span>
+            <h3>Seja meu convidado em um show intimista em casa</h3>
+            <p>A partir de R$228 / pessoa</p>
+          </div>
+        </a>
+        
+        <a href="#" class="experience-card animate-hover">
+          <div class="experience-img">
+            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Vida noturna">
+          </div>
+          <div class="experience-content">
+            <span class="experience-tag">Popular</span>
+            <h3>Conheça a vida noturna de São Paulo com nosso passeio de bar em bar</h3>
+            <p>A partir de R$165 / pessoa • 4.92</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roteiros Populares -->
+  <section class="px-6 md:px-60 py-20 bg-white text-left">
+    <h2 id="routes-title" class="text-2xl md:text-3xl font-bold section-title">Roteiros Populares</h2>
+    <p class="text-gray-600 mb-10 max-w-3xl">Conheça os passeios mais procurados em Foz do Iguaçu, cuidadosamente preparados para você aproveitar o melhor da cidade.</p>
+    <div class="relative">
+      <div class="slideshow-container roteiros-slideshow">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card p-8">
+            <div class="bg-[#1A4C76]/10 w-12 h-12 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-water text-[#1A4C76] text-xl"></i>
+            </div>
+            <h3 id="route1-title" class="text-xl font-semibold mb-3">1 dia nas Cataratas</h3>
+            <p class="text-gray-600 mb-4">Conheça uma das 7 maravilhas naturais do mundo em um roteiro completo de 1 dia.</p>
+            <a id="route1-btn" href="https://wa.me/5599999999999" class="secondary-button inline-flex items-center gap-2 mt-3">
+              <i class="fas fa-chevron-right text-sm"></i>
+              Quero esse roteiro
+            </a>
+          </div>
+          <div class="card p-8">
+            <div class="bg-[#1A4C76]/10 w-12 h-12 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-globe-americas text-[#1A4C76] text-xl"></i>
+            </div>
+            <h3 id="route2-title" class="text-xl font-semibold mb-3">Tríplice Fronteira em 2 dias</h3>
+            <p class="text-gray-600 mb-4">Explore Brasil, Argentina e Paraguai em uma experiência cultural única.</p>
+            <a id="route2-btn" href="https://wa.me/5599999999999" class="secondary-button inline-flex items-center gap-2 mt-3">
+              <i class="fas fa-chevron-right text-sm"></i>
+              Quero esse roteiro
+            </a>
+          </div>
+          <div class="card p-8">
+            <div class="bg-[#1A4C76]/10 w-12 h-12 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-shopping-bag text-[#1A4C76] text-xl"></i>
+            </div>
+            <h3 id="route3-title" class="text-xl font-semibold mb-3">Compras e cultura</h3>
+            <p class="text-gray-600 mb-4">As melhores dicas para compras no Paraguai combinadas com atrações culturais.</p>
+            <a id="route3-btn" href="https://wa.me/5599999999999" class="secondary-button inline-flex items-center gap-2 mt-3">
+              <i class="fas fa-chevron-right text-sm"></i>
+              Quero esse roteiro
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="px-6 md:px-60 py-28 bg-gray-100 text-left">
+    <h2 id="final-title" class="text-2xl md:text-4xl font-bold mb-4">Pronto pra explorar Foz como um local?</h2>
+    <p id="final-desc" class="mb-8 text-lg leading-relaxed">Me chama no WhatsApp e bora nessa aventura!</p>
+    <a id="final-btn" href="https://wa.me/5599999999999" class="primary-button inline-flex items-center gap-2">
+      <i class="fab fa-whatsapp text-lg"></i>
+      Falar com o Fozzy agora
+    </a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="text-center text-sm text-gray-500 bg-white py-10 border-t border-gray-100">
+  © <span id="ano"></span> Fozzytour. Todos os direitos reservados.
+</footer>
+
+<!-- Modal do Chat Web -->
+<div id="webchat-modal" style="display:none;" class="fixed z-[9999] flex items-start justify-end bg-black/30 p-8 inset-0 transition-all duration-300">
+  <div class="bg-white rounded-2xl shadow-xl relative flex flex-col overflow-hidden" style="width: 420px; height: 620px; max-width: 95vw; transform: translateY(0); transition: all 0.3s ease;">
+    <div id="webchat-espera" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+      <div class="espera-container">
+        <div class="loading-animation"></div>
+        <div class="loading-dots">
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+        </div>
+        <div class="espera-texto">
+          <i class="fas fa-robot"></i>
+          Conectando ao chat
+        </div>
+        <p class="espera-subtexto">
+          Estamos preparando tudo para melhor atender você
+        </p>
+      </div>
+    </div>
+    <div id="webchat-chat" style="display:none;width:100%;height:100%;flex-direction:column;">
+      <!-- Cabeçalho do chat -->
+      <div class="chat-header">
+        <div class="chat-title">
+          <div class="chat-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="chat-info">
+            <span class="chat-name">Chat FOZYY!</span>
+            <span class="chat-status">Online</span>
+          </div>
+        </div>
+        <button id="close-webchat-2" aria-label="Fechar chat">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <!-- Área de mensagens -->
+      <div class="chat-messages">
+        <div class="message-bubble bot">
+          <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message-content">
+            <p>Olá! Bem-vindo ao chat do Fozzytour! 👋</p>
+            <p>Como posso te ajudar hoje com informações sobre Foz do Iguaçu?</p>
+            <span class="message-time">Agora</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Área de digitação -->
+      <div class="chat-input-area">
+        <div class="chat-input-container">
+          <input type="text" placeholder="Digite sua mensagem..." class="chat-input" />
+          <button class="chat-send-btn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="chat-footer">
+          <span>Powered by Fozzytour</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Detalhes -->
+<div id="modal-detalhes" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+  <div class="bg-white rounded-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+    <div class="p-6">
+      <div class="flex justify-between items-start mb-4">
+        <h2 id="modal-titulo" class="text-2xl font-bold text-[#1A4C76]"></h2>
+        <button onclick="fecharModal()" class="text-gray-500 hover:text-gray-700">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <div id="modal-conteudo"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Traduções dos textos
+  const textos = {
+    pt: {
+      heroTitle: 'Seu guia turístico 24h em Foz do Iguaçu, direto no WhatsApp',
+      heroDesc: 'Descubra as atrações da tríplice fronteira com quem conhece tudo por aqui.',
+      heroBtn: 'Fale com o Fozzy',
+      howTitle: 'Como funciona',
+      howStep1: 'Você envia uma mensagem no WhatsApp',
+      howStep2: 'O Fozzy entende seu perfil de viagem',
+      howStep3: 'Receba dicas, roteiros e ajuda personalizada',
+      benefitsTitle: 'Benefícios de usar o Fozzytour',
+      benefit1: 'Atendimento 24h',
+      benefit2: 'Dicas locais exclusivas',
+      benefit3: 'Sugestões de passeios, restaurantes, compras e cultura',
+      benefit4: 'Zero enrolação: tudo pelo WhatsApp',
+      benefit5: '100% gratuito!',
+      routesTitle: 'Roteiros populares',
+      route1Title: '1 dia nas Cataratas',
+      route1Btn: 'Quero esse roteiro',
+      route2Title: 'Tríplice Fronteira em 2 dias',
+      route2Btn: 'Quero esse roteiro',
+      route3Title: 'Compras e cultura',
+      route3Btn: 'Quero esse roteiro',
+      finalTitle: 'Pronto pra explorar Foz como um local?',
+      finalDesc: 'Me chama no WhatsApp e bora nessa aventura!',
+      finalBtn: 'Falar com o Fozzy agora',
+    },
+    en: {
+      heroTitle: 'Your 24h tourist guide in Foz do Iguaçu, right on WhatsApp',
+      heroDesc: 'Discover the attractions of the triple border with a true local expert.',
+      heroBtn: 'Talk to Fozzy',
+      howTitle: 'How it works',
+      howStep1: 'You send a message on WhatsApp',
+      howStep2: 'Fozzy understands your travel profile',
+      howStep3: 'Get tips, itineraries and personalized help',
+      benefitsTitle: 'Benefits of using Fozzytour',
+      benefit1: '24h support',
+      benefit2: 'Exclusive local tips',
+      benefit3: 'Suggestions for tours, restaurants, shopping and culture',
+      benefit4: 'No hassle: everything on WhatsApp',
+      benefit5: '100% free!',
+      routesTitle: 'Popular itineraries',
+      route1Title: '1 day at the Falls',
+      route1Btn: 'I want this itinerary',
+      route2Title: 'Triple Border in 2 days',
+      route2Btn: 'I want this itinerary',
+      route3Title: 'Shopping and culture',
+      route3Btn: 'I want this itinerary',
+      finalTitle: 'Ready to explore Foz like a local?',
+      finalDesc: 'Message me on WhatsApp and let\'s go on this adventure!',
+      finalBtn: 'Talk to Fozzy now',
+    },
+    es: {
+      heroTitle: 'Tu guía turístico 24h en Foz de Iguazú, directo en WhatsApp',
+      heroDesc: 'Descubre las atracciones de la triple frontera con quien conoce todo por aquí.',
+      heroBtn: 'Habla con Fozzy',
+      howTitle: '¿Cómo funciona?',
+      howStep1: 'Envías un mensaje por WhatsApp',
+      howStep2: 'Fozzy entiende tu perfil de viaje',
+      howStep3: 'Recibe consejos, itinerarios y ayuda personalizada',
+      benefitsTitle: 'Beneficios de usar Fozzytour',
+      benefit1: 'Atención 24h',
+      benefit2: 'Consejos locales exclusivos',
+      benefit3: 'Sugerencias de paseos, restaurantes, compras y cultura',
+      benefit4: 'Sin rodeos: todo por WhatsApp',
+      benefit5: '¡100% gratis!',
+      routesTitle: 'Rutas populares',
+      route1Title: '1 día en las Cataratas',
+      route1Btn: 'Quiero este itinerario',
+      route2Title: 'Triple Frontera en 2 días',
+      route2Btn: 'Quiero este itinerario',
+      route3Title: 'Compras y cultura',
+      route3Btn: 'Quiero este itinerario',
+      finalTitle: '¿Listo para explorar Foz como un local?',
+      finalDesc: '¡Envíame un mensaje por WhatsApp y vamos a esta aventura!',
+      finalBtn: 'Hablar con Fozzy ahora',
+    }
+  };
+
+  function traduzir(lang) {
+    const t = textos[lang];
+    document.getElementById('hero-title').textContent = t.heroTitle;
+    document.getElementById('hero-desc').textContent = t.heroDesc;
+    document.getElementById('hero-btn').innerHTML = '<i class="fab fa-whatsapp text-lg"></i> ' + t.heroBtn;
+    document.getElementById('how-title').textContent = t.howTitle;
+    document.getElementById('how-step1').textContent = t.howStep1;
+    document.getElementById('how-step2').textContent = t.howStep2;
+    document.getElementById('how-step3').textContent = t.howStep3;
+    document.getElementById('benefits-title').textContent = t.benefitsTitle;
+    document.getElementById('benefit1').querySelector('span').textContent = t.benefit1;
+    document.getElementById('benefit2').querySelector('span').textContent = t.benefit2;
+    document.getElementById('benefit3').querySelector('span').textContent = t.benefit3;
+    document.getElementById('benefit4').querySelector('span').textContent = t.benefit4;
+    document.getElementById('benefit5').querySelector('span').textContent = t.benefit5;
+    document.getElementById('routes-title').textContent = t.routesTitle;
+    document.getElementById('route1-title').textContent = t.route1Title;
+    document.getElementById('route1-btn').innerHTML = '<i class="fas fa-chevron-right text-sm"></i> ' + t.route1Btn;
+    document.getElementById('route2-title').textContent = t.route2Title;
+    document.getElementById('route2-btn').innerHTML = '<i class="fas fa-chevron-right text-sm"></i> ' + t.route2Btn;
+    document.getElementById('route3-title').textContent = t.route3Title;
+    document.getElementById('route3-btn').innerHTML = '<i class="fas fa-chevron-right text-sm"></i> ' + t.route3Btn;
+    document.getElementById('final-title').textContent = t.finalTitle;
+    document.getElementById('final-desc').textContent = t.finalDesc;
+    document.getElementById('final-btn').innerHTML = '<i class="fab fa-whatsapp text-lg"></i> ' + t.finalBtn;
+    
+    // Atualizar bandeira e texto do seletor de idioma
+    const flagMap = {
+      'pt': {text: 'Português', flag: 'https://flagcdn.com/w40/br.png'},
+      'en': {text: 'English', flag: 'https://flagcdn.com/w40/us.png'},
+      'es': {text: 'Español', flag: 'https://flagcdn.com/w40/es.png'}
+    };
+    
+    document.getElementById('current-language').textContent = flagMap[lang].text;
+    document.getElementById('current-flag').src = flagMap[lang].flag;
+    
+    // Atualizar classe ativa no dropdown
+    document.querySelectorAll('.language-option').forEach(option => {
+      option.classList.remove('active');
+      if (option.dataset.lang === lang) {
+        option.classList.add('active');
+      }
+    });
+  }
+
+  // Seletor de idioma
+  document.getElementById('language-button').addEventListener('click', function() {
+    document.getElementById('language-dropdown').classList.toggle('visible');
+  });
+  
+  document.querySelectorAll('.language-option').forEach(option => {
+    option.addEventListener('click', function() {
+      const lang = this.dataset.lang;
+      traduzir(lang);
+      document.getElementById('language-dropdown').classList.remove('visible');
+    });
+  });
+  
+  // Fechar dropdown quando clicar fora
+  document.addEventListener('click', function(event) {
+    const selector = document.querySelector('.language-selector');
+    const dropdown = document.getElementById('language-dropdown');
+    if (!selector.contains(event.target) && dropdown.classList.contains('visible')) {
+      dropdown.classList.remove('visible');
+    }
+  });
+
+  // Modal do Chat Web
+  const openWebchatBtn = document.getElementById('open-webchat');
+  const webchatModal = document.getElementById('webchat-modal');
+  const closeWebchatBtn = document.getElementById('close-webchat');
+  const webchatEspera = document.getElementById('webchat-espera');
+  const webchatChat = document.getElementById('webchat-chat');
+  let esperaTimeout = null;
+
+  openWebchatBtn.addEventListener('click', function() {
+    webchatModal.style.display = 'flex';
+    webchatEspera.style.display = 'flex';
+    webchatChat.style.display = 'none';
+    esperaTimeout = setTimeout(() => {
+      webchatEspera.style.display = 'none';
+      webchatChat.style.display = 'flex';
+      // Adiciona o event listener do botão X do chat após ele existir no DOM
+      const closeWebchat2 = document.getElementById('close-webchat-2');
+      if (closeWebchat2) {
+        closeWebchat2.onclick = fecharChatModal;
+      }
+    }, 2200);
+  });
+  function fecharChatModal() {
+    webchatModal.style.display = 'none';
+    webchatEspera.style.display = 'flex';
+    webchatChat.style.display = 'none';
+    if (esperaTimeout) clearTimeout(esperaTimeout);
+  }
+  closeWebchatBtn.addEventListener('click', fecharChatModal);
+  document.getElementById('close-webchat-2').addEventListener('click', fecharChatModal);
+  // Fechar modal ao clicar fora do conteúdo
+  webchatModal.addEventListener('click', function(e) {
+    if (e.target === webchatModal) {
+      fecharChatModal();
+    }
+  });
+</script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let mapa = null;
+  let markers = [];
+
+  // Pontos turísticos (adicione mais se quiser)
+  const pontos = [
+    {
+      nome: "Cataratas do Iguaçu",
+      tipo: "parque",
+      nicho: "aventura",
+      descricao: "Uma das maiores quedas d'água do mundo.",
+      latitude: -25.6953,
+      longitude: -54.4367,
+      preco: "R$ 100,00",
+      imagem: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2",
+      endereco: "Rodovia BR-469, Km 18, Foz do Iguaçu",
+      visitasAno: [1200, 1500, 1800, 2000, 2500, 3000, 2800, 2600, 2200, 1900, 1600, 1400],
+      visitasSemana: [300, 400, 500, 600, 700, 800, 600],
+      meses: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      dias: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom']
+    },
+    {
+      nome: "Templo Budista",
+      tipo: "cultural",
+      nicho: "cultural",
+      descricao: "Templo com arquitetura oriental e vista panorâmica.",
+      latitude: -25.5163,
+      longitude: -54.5708,
+      preco: "R$ 30,00",
+      imagem: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325",
+      endereco: "Rua Dr. Josivalter Vila Nova, 99",
+      visitasAno: [800, 900, 1000, 1100, 1200, 1300, 1200, 1100, 1000, 900, 800, 700],
+      visitasSemana: [200, 250, 300, 350, 400, 450, 300],
+      meses: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      dias: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom']
+    }
+    // ...adicione mais pontos se quiser
+  ];
+
+  function limparBusca() {
+    if (mapa) {
+      markers.forEach(marker => mapa.removeLayer(marker));
+      markers = [];
+    }
+    document.getElementById('resultados').innerHTML = '';
+  }
+
+  function criarCardResultado(ponto) {
+    return `
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer mb-2"
+        onclick="abrirModalDetalhado('${ponto.nome.replace(/'/g, "\\'")}')">
+        <h3 class="font-bold text-lg mb-2">${ponto.nome}</h3>
+        <p class="text-gray-600 mb-2">${ponto.descricao}</p>
+        <div class="flex gap-2">
+          <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">${ponto.tipo}</span>
+          <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">${ponto.nicho}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  window.abrirModalDetalhado = function(nomePonto) {
+    const ponto = pontos.find(p => p.nome === nomePonto);
+    if (!ponto) return;
+
+    const graficoAnoId = 'grafico-ano';
+    const graficoSemanaId = 'grafico-semana';
+
+    setTimeout(() => {
+      Plotly.newPlot(graficoAnoId, [{
+        x: ponto.meses,
+        y: ponto.visitasAno,
+        type: 'bar',
+        marker: { color: '#1A4C76' }
+      }], {
+        title: 'Visitas por Mês',
+        margin: { t: 30, b: 40, l: 40, r: 20 },
+        height: 200
+      });
+
+      Plotly.newPlot(graficoSemanaId, [{
+        x: ponto.dias,
+        y: ponto.visitasSemana,
+        type: 'bar',
+        marker: { color: '#2980b9' }
+      }], {
+        title: 'Visitas por Dia da Semana',
+        margin: { t: 30, b: 40, l: 40, r: 20 },
+        height: 200
+      });
+    }, 100);
+
+    document.getElementById('modal-titulo').textContent = ponto.nome;
+    document.getElementById('modal-conteudo').innerHTML = `
+      <div class="flex flex-col md:flex-row gap-6 mb-6">
+        <img src="${ponto.imagem}" alt="${ponto.nome}" class="w-full md:w-1/2 h-64 object-cover rounded-lg">
+        <div class="space-y-2">
+          <div class="text-lg font-semibold text-[#1A4C76]">Preço: ${ponto.preco}</div>
+          <div class="text-gray-700"><b>Endereço:</b> ${ponto.endereco}</div>
+          <div class="flex gap-2 mt-2">
+            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">${ponto.tipo}</span>
+            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">${ponto.nicho}</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div><div id="${graficoAnoId}"></div></div>
+        <div><div id="${graficoSemanaId}"></div></div>
+      </div>
+    `;
+    document.getElementById('modal-detalhes').classList.remove('hidden');
+  };
+
+  window.fecharModal = function() {
+    document.getElementById('modal-detalhes').classList.add('hidden');
+  };
+
+  document.getElementById('busca-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('mapa').style.display = 'block';
+    document.getElementById('resultados').style.display = 'block';
+
+    if (!mapa) {
+      mapa = L.map('mapa').setView([-25.5, -54.5], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+      }).addTo(mapa);
+    }
+
+    limparBusca();
+
+    const tipo = document.getElementById('tipo').value;
+    const nicho = document.getElementById('nicho').value;
+
+    const filtrados = pontos.filter(ponto =>
+      (!tipo || ponto.tipo === tipo) &&
+      (!nicho || ponto.nicho === nicho)
+    );
+
+    if (filtrados.length === 0) {
+      document.getElementById('resultados').innerHTML = `<div class="text-center text-gray-500 py-8">Nenhum ponto encontrado com esses filtros.</div>`;
+      document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    filtrados.forEach(ponto => {
+      const marker = L.marker([ponto.latitude, ponto.longitude]).addTo(mapa)
+        .bindPopup(`<strong>${ponto.nome}</strong><br>${ponto.descricao}`);
+      markers.push(marker);
+      document.getElementById('resultados').innerHTML += criarCardResultado(ponto);
+    });
+
+    // Ajusta o zoom do mapa
+    if (filtrados.length > 1) {
+      const grupo = L.featureGroup(filtrados.map(p => L.marker([p.latitude, p.longitude])));
+      mapa.fitBounds(grupo.getBounds().pad(0.1));
+    } else if (filtrados.length === 1) {
+      mapa.setView([filtrados[0].latitude, filtrados[0].longitude], 15);
+    }
+    document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

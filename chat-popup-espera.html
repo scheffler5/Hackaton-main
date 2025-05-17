@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Conectando ao Chat</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    }
+    .espera-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .dots {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 18px;
+      height: 60px;
+      justify-content: center;
+    }
+    .dot {
+      width: 16px;
+      height: 16px;
+      background: #205080;
+      border-radius: 50%;
+      margin: 6px 0;
+      opacity: 0.5;
+      animation: ping 1.2s infinite;
+    }
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+      opacity: 0.7;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+      opacity: 1;
+    }
+    @keyframes ping {
+      0% { transform: scale(1); opacity: 0.5; }
+      30% { transform: scale(1.2); opacity: 1; }
+      60% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+    .espera-texto {
+      color: #205080;
+      font-size: 1.25rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="espera-container">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="espera-texto">esperando chat-bot se juntar...</div>
+  </div>
+</body>
+</html> 
