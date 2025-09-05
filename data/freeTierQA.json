@@ -1,0 +1,517 @@
+{
+    "perguntas_respostas": [{
+            "id": "qa_horario_cataratas_br",
+            "keywords": ["horário cataratas", "cataratas abre", "funcionamento cataratas brasil", "hora cataratas"],
+            "resposta": "O Parque Nacional do Iguaçu (lado brasileiro) geralmente abre às 9h e fecha às 18h durante a semana, e das 8h30 às 18h nos finais de semana e feriados. Mas oh, essa informação pode mudar, então é sempre uma boa ideia confirmar no site oficial cataratasdoiguacu.com.br antes de ir, tá? 😉",
+            "maps_target": "Cataratas do Iguaçu, Rodovia Br 469 Foz do Iguaçu, PR"
+        },
+        {
+            "id": "qa_documentos_paraguai",
+            "keywords": ["documentos paraguai", "documento paraguai", "precisa passaporte paraguai", "entrar paraguai", "rg paraguai"],
+            "resposta": "Para brasileiros entrarem em Ciudad del Este (Paraguai) para turismo ou compras, geralmente o RG original (com menos de 10 anos de expedição e em bom estado) ou Passaporte válido são aceitos. CNH brasileira não costuma ser aceita como documento de imigração, apenas para dirigir. Menores desacompanhados ou com apenas um dos pais precisam de autorização específica. É sempre bom checar as regras mais atuais antes da viagem, viu? 🛂"
+        },
+        {
+            "id": "qa_cota_compras_paraguai",
+            "keywords": ["cota paraguai", "limite compras paraguai", "valor alfandega paraguai", "quanto posso trazer paraguai"],
+            "resposta": "A cota de isenção para compras no Paraguai por via terrestre é de US$ 500 (quinhentos dólares americanos) por pessoa, uma vez a cada intervalo de um mês. Lembre-se que essa cota é individual e intransferível. Para informações super atualizadas e detalhadas, o ideal é sempre consultar o site da Receita Federal do Brasil, pois as regras podem mudar! 🛍️💰"
+        },
+        {
+            "id": "qa_melhor_epoca_foz",
+            "keywords": ["melhor epoca foz", "quando ir foz", "clima foz", "temporada foz"],
+            "resposta": "Foz do Iguaçu é incrível o ano todo! ☀️ De abril a julho, o clima costuma ser mais seco e ameno, ótimo para passeios. De dezembro a março é mais quente e chuvoso, o que deixa as Cataratas com um volume de água impressionante! Para ver menos filas, evite alta temporada e feriados prolongados, se puder. 😉"
+        },
+        {
+            "id": "qa_oque_levar_cataratas",
+            "keywords": ["o que levar cataratas", "roupa cataratas", "vestir cataratas", "essencial cataratas"],
+            "resposta": "Para visitar as Cataratas, vá com roupas e calçados confortáveis para caminhada! 👟 Um protetor solar, repelente e um boné são super bem-vindos. Ah, e se for chegar pertinho das quedas (especialmente no Macuco Safari ou nas passarelas inferiores), uma capa de chuva ou uma troca de roupa podem ser uma boa, porque molha de verdade! 💦 Leve sua câmera ou celular bem carregado para muitas fotos! 📸",
+            "maps_target": null
+        },
+        {
+            "id": "qa_cataratas_br_vs_ar",
+            "keywords": ["cataratas lado brasileiro ou argentino", "diferença cataratas brasil argentina", "qual lado cataratas melhor"],
+            "resposta": "Os dois lados das Cataratas são espetaculares e se complementam! 🤩 Do lado brasileiro, você tem uma vista panorâmica incrível das quedas. Já do lado argentino, você chega bem pertinho delas, sentindo a força da água, especialmente na Garganta do Diabo. Se tiver tempo, recomendo muito visitar os dois! 😉",
+            "maps_target": null
+        },
+        {
+            "id": "qa_itaipu_o_que_e",
+            "keywords": ["o que é itaipu", "usina de itaipu", "itaipu binacional"],
+            "resposta": "A Usina de Itaipu Binacional é uma gigante! É uma das maiores hidrelétricas do mundo em geração de energia, uma obra de engenharia impressionante construída em parceria entre o Brasil e o Paraguai no Rio Paraná. Além de gerar energia, tem vários passeios turísticos super legais por lá! 💡🌉",
+            "maps_target": "Itaipu Binacional, Foz do Iguaçu, PR"
+        },
+        {
+            "id": "qa_parque_das_aves",
+            "keywords": ["parque das aves vale a pena", "o que tem parque das aves", "como é o parque das aves"],
+            "resposta": "O Parque das Aves é demais, super recomendo! 🦜 Fica pertinho das Cataratas do lado brasileiro. Você caminha por viveiros imensos e fica cara a cara com araras, tucanos, flamingos e muitas outras aves incríveis da Mata Atlântica, muitas delas resgatadas. É uma experiência linda e super importante para a conservação! ✨",
+            "maps_target": "Parque das Aves, Rodovia das Cataratas, Foz do Iguaçu, PR"
+        },
+        {
+            "id": "qa_marco_das_tres_fronteiras",
+            "keywords": ["marco das tres fronteiras o que fazer", "shows marco tres fronteiras", "como é o marco"],
+            "resposta": "O Marco das Três Fronteiras é um lugar super charmoso, onde Brasil, Argentina e Paraguai se encontram! 🇧🇷🇦🇷🇵🇾 Tem um obelisco de cada país, um pôr do sol lindo e apresentações culturais à noite que contam a história da região. Ótimo para fotos e para curtir o fim de tarde! Tem também um restaurante e parquinho para crianças.",
+            "maps_target": "Marco das Três Fronteiras, Foz do Iguaçu, PR"
+        },
+        {
+            "id": "qa_transporte_foz",
+            "keywords": ["como se locomover em foz", "transporte foz do iguaçu", "onibus foz", "taxi foz", "uber foz"],
+            "resposta": "Para se virar em Foz, você tem algumas opções! 🚌 Os ônibus urbanos chegam nos principais pontos turísticos. Carros de aplicativo (como Uber) e táxis também são bastante usados. Se quiser mais liberdade e visitar cidades vizinhas, alugar um carro pode ser uma boa. Para ir ao Paraguai, muita gente usa vans de turismo ou mototáxis também!",
+            "maps_target": null
+        },
+        {
+            "id": "qa_moeda_paraguai",
+            "keywords": ["moeda paraguai", "comprar paraguai real dolar guarani", "aceita real paraguai"],
+            "resposta": "Em Ciudad del Este, no Paraguai, a maioria das lojas aceita Dólar Americano (USD) e Real (BRL) tranquilamente! 💵 O Guarani (PYG) é a moeda local, mas para compras turísticas, dólar e real são super comuns. Fique de olho na cotação do dia que a loja está praticando para ver o que compensa mais! 😉",
+            "maps_target": "Ciudad del Este, Paraguai"
+        },
+        {
+            "id": "qa_compras_paraguai_seguro",
+            "keywords": ["comprar no paraguai é seguro", "perigoso compras paraguai", "dicas segurança paraguai"],
+            "resposta": "Comprar em Ciudad del Este pode ser uma ótima experiência, mas como todo lugar movimentado, é bom ficar esperto! 🤓 Prefira lojas conhecidas e com boa reputação, desconfie de ofertas milagrosas e, se possível, teste os produtos eletrônicos na hora. Evite exibir grandes quantias de dinheiro e cuide bem dos seus pertences. Com atenção, suas compras serão um sucesso! 👍",
+            "maps_target": "Ciudad del Este, Paraguai"
+        },
+        {
+            "id": "qa_o_que_fazer_puerto_iguazu",
+            "keywords": ["o que fazer puerto iguazu", "dicas puerto iguazu", "feirinha argentina", "cassino argentina"],
+            "resposta": "Puerto Iguazú, na Argentina, é um charme! 🇦🇷 Além do lado argentino das Cataratas, você pode visitar a Feirinha (La Aripuca ou a mais central), provar vinhos e alfajores, jantar em restaurantes ótimos (a carne argentina é famosa!) e até tentar a sorte no cassino. O Duty Free Shop na entrada da cidade também é uma parada popular!",
+            "maps_target": "Puerto Iguazú, Misiones, Argentina"
+        },
+        {
+            "id": "qa_seguranca_foz",
+            "keywords": ["foz do iguaçu é seguro", "segurança em foz", "perigoso foz"],
+            "resposta": "Foz do Iguaçu é uma cidade turística e geralmente tranquila, especialmente nas áreas hoteleiras e pontos turísticos mais movimentados. 👍 Como em qualquer cidade grande, é sempre bom ter os cuidados básicos: atenção com seus pertences, evitar andar sozinho por lugares muito desertos à noite, essas coisas. Mas no geral, pode vir relaxado pra curtir!",
+            "maps_target": null
+        },
+        {
+            "id": "qa_o_que_levar_mala_foz",
+            "keywords": ["o que levar na mala foz", "arrumar mala foz", "roupas para foz"],
+            "resposta": "Para sua mala pra Foz, pense em conforto! ☀️ Roupas leves para o calor (que é comum na maior parte do ano), tênis confortáveis para as caminhadas, protetor solar, repelente, óculos de sol e boné/chapéu. Se for no inverno (junho/julho), um casaquinho é bom para as noites. E claro, uma capa de chuva pode ser útil para as Cataratas! 😉",
+            "maps_target": null
+        },
+        {
+            "id": "qa_vacina_febre_amarela_foz",
+            "keywords": ["vacina febre amarela foz", "precisa vacina foz", "saude viagem foz"],
+            "resposta": "Sobre vacinas, como a de febre amarela, a recomendação pode mudar. Foz do Iguaçu está em uma área de fronteira e próxima a matas. O ideal é sempre verificar as orientações mais recentes do Ministério da Saúde ou da ANVISA antes da sua viagem, e consultar seu médico. Prevenir é sempre o melhor, né? 😊",
+            "maps_target": null
+        },
+        {
+            "id": "qa_tomada_eletrica_foz",
+            "keywords": ["tomada foz", "voltagem foz do iguaçu", "tipo de tomada foz"],
+            "resposta": "Em Foz do Iguaçu, a voltagem padrão é 127V, mas muitos hotéis oferecem também 220V. O padrão de tomada é aquele novo brasileiro, de três pinos redondos (tipo N). Se seus aparelhos têm plugues diferentes, é bom trazer um adaptador universal para não ter surpresas! 🔌⚡",
+            "maps_target": null
+        },
+        {
+            "id": "qa_agua_cataratas_beber",
+            "keywords": ["pode beber agua cataratas", "agua potavel cataratas", "beber agua foz"],
+            "resposta": "A água das Cataratas em si, direto das quedas, não é pra beber, viu? 🏞️ Para se hidratar durante os passeios, leve sua garrafinha e use os bebedouros disponíveis nos parques ou compre água mineral. A água da torneira em Foz geralmente é tratada, mas muitos turistas preferem consumir água mineral engarrafada.",
+            "maps_target": null
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "id": "qa_agredecimento",
+            "keywords": ["Muito Obrigado", "Valeu", "Thanks", "Thank you", "Ate a proxima"],
+            "resposta": "De Nada, e ate a proxima, caso nescessite estarei aqui para recepciona-lo 🤓",
+            "maps_target": null
+        },
+        {
+            "id": "qa_apresentação",
+            "keywords": ["oi", "Ola", "Olá", "ola", "olá", "Oi"],
+            "resposta": "Olá, eu sou o Fozzy seu assistente Virtual 😉! tenho um Menu magico de assuntos para voce me perguntar, se quiser ve-lo, apenas digite 'Menu', se quiser ver o menu de restaurantes, so para eu nao me confundir digite 'Menu [Restaurante]'."
+        },
+        {
+            "id": "qa_menu",
+            "keywords": ["Menu", "menu"],
+            "resposta": "Pois bem, Tenho alguns assuntinhos para nós conversarmos:\n  1 - Cataratas do Iguaçu 🌳.\n  2 - Restaurantes listados digite 'Menu Categorias'\n  3 - Menus de Restaurante digite 'Menu [Restaurante] 🍽️. \n  4 - Roteiros Personalizados para o seu dia 🗺️.\n  5 - Perguntas curiosas sobre a triplice fronteira 🤔."
+        },
+        {
+            "id": "qa_menu_Categorias",
+            "keywords": ["Menu Categorias", "Menu categorias", "menu Categorias", "menu categorias"],
+            "resposta": "Beleza!, entao voce quer comer em algum restaurante, mas nao sabe qual né?, sem problemas, para encontrarmos o lugar correto, escolha um tipo de comida\n Pizzaria (Digite 'Onde comer pizza')\n Churrascarias (Digite 'Onde comer churrasco')\n Comida italiana (Digite 'Onde comer italiano')\n Bares (Digite 'Onde tem bares')\n Comidas por quilo (Digite 'Comer por quilo')\n Comidas internacionais (Digite 'Comer internacional')\n Cafeterias (Digite 'Comer cafeterias')"
+        },
+
+
+
+        {
+            "id": "qa_categoria_pizzarias",
+            "keywords": ["Onde comer pizza"],
+            "resposta": "Claro! Foz do Iguaçu tem uma cena de pizza incrível, com opções para todos os gostos. Aqui estão as pizzarias que tenho no meu radar. É só pedir que te dou mais detalhes de qualquer uma delas!\n\n* **Jurassic Pizza:** Divertida e temática, ótima para ir com a família.\n* **Vó Bertila Pizza & Pasta:** Famosa pelas pizzas e massas artesanais também.\n* **Luigi Pizzaria Napoletana:** Especialista no autêntico estilo de Nápoles (pizzas individuais).\n* **Del Forno Pizzaria Foz:** Destaque para o sabor especial do forno a lenha.\n* **Domino's Pizzaria Foz:** Rede famosa pelo estilo americano e entregas rápidas.\n* **Bel Valle Restaurante e Pizzaria:** Opção que une restaurante tradicional e pizzaria.\n* **Armazém Gastro Beer:** Um bar descolado que também serve pizzas artesanais.\n* **Chicken Fan Pizza:** O paraíso para quem é fã de pizza de frango.\n* **Best Pizza:** Foco em sabores populares e entrega.\n* **D'Itália Pizza:** Pizzaria com um toque italiano clássico.\n* **Danny Pizza:** Típica pizzaria de bairro, com bom custo-benefício.\n* **Don Garcia Pizzaria:** Ambiente tradicional e familiar.\n* **Império Pizza:** Conhecida pelo cardápio com uma imensa variedade de sabores.\n* **Pizzaria Martignoni:** Pizzaria tradicional com nome de família.\n* **Mega Pizza Foz:** Famosa pelos tamanhos gigantes, para dividir com a galera.\n* **Pizza Peroni:** Uma das pizzarias bem conhecidas e estabelecidas na cidade.\n* **Pizzaria MR:** Ótima opção de delivery na sua região.\n* **Pizzaria Tropicana / Express:** Pizzaria tradicional, com uma unidade para entregas rápidas.\n* **Pizzaria Victoria:** Ambiente clássico, ideal para um jantar em família.\n* **Pizza Restaurante (Av. JK):** Lugar simples que serve pizzas e outros pratos.\n* **Cataratas Bowling Center:** Serve pizza como opção de lanche durante o jogo de boliche."
+        },
+        {
+            "id": "qa_categoria_churrascarias",
+            "keywords": ["Onde comer churrasco"],
+            "resposta": "Com certeza! Para quem não dispensa uma boa carne, Foz tem opções excelentes. Veja só:\n\n* **Rafain Churrascaria Show:** A mais famosa, com rodízio completo e um grande show latino-americano.\n* **La Sorella Restaurante e Churrascaria:** Oferece um ótimo buffet que une churrasco e massas.\n* **Arena Churrasquitos:** Perfeito para algo mais casual, com foco em espetinhos na brasa."
+        },
+        {
+            "id": "qa_categoria_italianos",
+            "keywords": ["Onde comer italiano"],
+            "resposta": "Mamma mia! Se você busca uma boa massa, Foz é um prato cheio. Aqui estão os especialistas:\n\n* **Bona Trattoria:** Ambiente moderno e sofisticado, famoso pela massa finalizada no queijo.\n* **Vó Bertila Pizza & Pasta:** Cantina tradicional e amada, com massas e pizzas artesanais.\n* **La Mafia Trattoria:** Restaurante temático e divertido com clássicos da cozinha italiana.\n* **Allegro Restaurante:** Oferece pratos italianos e mediterrâneos em um ambiente contemporâneo.\n* **La Sorella Restaurante e Churrascaria:** Além do churrasco, tem um buffet de massas bem servido.\n* **Noite Italiana Bella Italia:** Uma experiência gastronômica com um buffet italiano gigantesco, famoso pela mesa de queijos."
+        },
+        {
+            "id": "qa_categoria_bares_restaurantes",
+            "keywords": ["Onde tem bar"],
+            "resposta": "Procurando um lugar com bom ambiente, drinks e comida de qualidade? Tenho ótimas sugestões:\n\n* **Bendito Bar e Restaurante:** Super alto astral, com porções generosas e chopp sempre gelado.\n* **Água Doce Cachaçaria Foz:** Famoso pelos pratos gigantes de comida brasileira e centenas de cachaças.\n* **Empório com Arte:** Ambiente charmoso e cardápio variado para almoço e jantar.\n* **Taj Bar Foz:** Um lounge bar sofisticado com tema indo-asiático, drinks e sushi.\n* **Armazém Gastro Beer:** Lugar moderno com foco em cervejas artesanais e pizzas.\n* **AUTHENTIC BAR:** Bar com proposta moderna e possibilidade de música ao vivo.\n* **CITY BIER CRAFT BEER:** O paraíso para os amantes de cerveja e chope artesanal."
+        },
+        {
+            "id": "qa_categoria_buffet_quilo",
+            "keywords": ["Comida por quilo"],
+            "resposta": "Para quem gosta de variedade e de montar o próprio prato, Foz tem ótimas opções de buffet:\n\n* **Cheiro Verde:** Restaurante por quilo muito popular, com comida caseira de qualidade.\n* **Marias (Shopping JL Cataratas):** Opção prática de buffet por quilo na praça de alimentação do shopping.\n* **Noite Italiana Bella Italia:** Um imenso buffet temático italiano com preço fixo.\n* **Arapaduá Restaurante (Recanto Cataratas Resort):** Buffet de alto padrão dentro de um dos melhores resorts da cidade.\n* **La Sorella Restaurante e Churrascaria:** Buffet livre com foco em churrasco e massas."
+        },
+        {
+            "id": "qa_categoria_internacional",
+            "keywords": ["Onde comer internacional"],
+            "resposta": "Quer viajar pelo mundo sem sair de Foz? É pra já! Temos sabores de vários lugares:\n\n* **Asiática (Japonesa/Chinesa):**\n    * **Taj Bar Foz:** Culinária indo-asiática e sushi em um ambiente de lounge.\n    * **Hokila:** Restaurante chinês tradicional com pratos grandes para compartilhar.\n* **Árabe:**\n    * **Ansar Almadina (A Marina Cozinha Árabe):** Serve os clássicos como esfiha, kibe e shawarma.\n* **Alemã:**\n    * **Restaurante Castelo Alemão:** Especialista em pratos típicos como joelho de porco e salsichões.\n* **Frutos do Mar:**\n    * **Atlântica Restaurante & Marisqueria:** Focado em peixes e frutos do mar, em um ambiente mais requintado."
+        },
+        {
+            "id": "qa_categoria_cafes_lanches",
+            "keywords": ["Onde comer cafeterias"],
+            "resposta": "Para uma pausa, um café da tarde ou um lanche rápido e saboroso, anote essas dicas:\n\n* **Padaria Paulistana:** Super completa, com pães, doces, salgados e almoço.\n* **Alfredo's Caffè Centro:** Um café tradicional no coração da cidade.\n* **Café do Coart:** Café charmoso dentro da Cooperativa de Artesãos.\n* **Giacoffee (Box):** Um quiosque para pegar um café especial de qualidade.\n* **A Roça Lanchonete:** Lanches simples e caseiros, com gostinho de interior.\n* **Bar e Lanchonete D. Julia:** Típico lugar de bairro para um lanche ou um Prato Feito (PF) econômico.\n* **Acauã A Venda:** O lugar certo para quem ama açaí na tigela."
+        },
+        {
+            "id": "qa_categoria_tematicos_entretenimento",
+            "keywords": ["Onde comer tematico"],
+            "resposta": "Procurando uma experiência que vai além da comida? Foz tem lugares com temas incríveis e até shows! Confira:\n\n* **Rafain Churrascaria Show:** Jantar com um show espetacular de danças latino-americanas.\n* **Noite Italiana Bella Italia:** Uma imersão na Itália com música e um buffet gigantesco.\n* **Jurassic Pizza:** As crianças (e os adultos!) adoram o ambiente temático de dinossauros.\n* **Taj Bar Foz:** Um pedaço da Ásia com música de lounge e DJs.\n* **La Mafia Trattoria:** Jante em um ambiente divertido inspirado nos filmes de máfia.\n* **Bar do Carmen Miranda (Mabu Thermas):** Um bar super colorido e tropical em homenagem à pequena notável.\n* **Cataratas Bowling Center:** Que tal comer uma pizza enquanto joga uma partida de boliche?"
+        },
+
+
+
+
+
+        {
+            "id": "qa_cataratas",
+            "keywords": ["Cataratas do Iguaçu", "cataratas do Iguaçu", "Cataratas do iguaçu", "cataratas do iguaçu", "1"],
+            "resposta": "As Cataratas do Iguaçu são um espetáculo com cerca de 275 quedas d'água na fronteira Brasil-Argentina! 🌊 No lado brasileiro, você tem vistas panorâmicas incríveis. Já no argentino, sente a força das águas bem de perto, especialmente na Garganta do Diabo.\nPara uma experiência completa, visite os dois lados – reserve pelo menos 2 dias. Passeios de barco como o Macuco Safari te levam para um banho sob as quedas! Não esqueça roupas confortáveis e ingressos antecipados.\nQuer saber sobre hotéis, restaurantes ou como chegar lá com dicas do Waze e Google Maps? É só me perguntar que te ajudo a montar o roteiro ideal! 😉",
+            "maps_target": "Cataratas do Iguaçu, Rodovia Br 469 Foz do Iguaçu, PR"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "id": "qa_menu_rafain",
+            "keywords": ["Menu [Rafain]", "Menu Rafain", "Menu rafain", "menu rafain"],
+            "resposta": "O menu da Churrascaria Rafain é composto por\n- Churrasco: Mais de 15 tipos de carnes nobres.\n- Buffet de Saladas: Grande variedade.\n- Pratos Quentes: Inclui pratos típicos brasileiros.\n- Cozinha Internacional: Amostras da culinária oriental, árabe e massas italianas.\n- Frutos do Mar: Opções de peixes e frutos do mar.\n- Sobremesas: Um buffet de sobremesas ricamente elaborado.\n\n*O preço do rodizio está:\nAlmoço: O buffet completo custa aproximadamente entre R$ 120 e R$ 135 por adulto.\nJantar com Show: Para aproveitar o jantar e o famoso show latino-americano, o valor fica entre R$ 180 e R$ 280 por adulto."
+        }, {
+            "id": "qa_menu_JurassicPizza",
+            "keywords": ["Menu [Jurassic Pizza]", "Menu jurassic pizza", "Menu Jurassic Pizza", "menu jurassic pizza", "menu Jurassic", "Menu Jurassic"],
+            "resposta": "Pizzas Salgadas:\nTradicionais (Ex: Calabresa, Mussarela, Marguerita, Frango com Catupiry):\nMédia: R$ 50 - R$ 70\nGrande: R$ 70 - R$ 95\nGigante/Família: R$ 90 - R$ 120\nEspeciais/Premium (Ex: Com ingredientes como camarão, carne seca, queijos nobres, nomes temáticos):\nMédia: R$ 65 - R$ 85\nGrande: R$ 85 - R$ 115\nGigante/Família: R$ 110 - R$ 150\nPizzas com borda recheada: Geralmente têm um acréscimo de R$ 5 a R$ 15, dependendo do recheio da borda.\nPizzas Doces (Ex: Chocolate com Morango, Romeu e Julieta, Banana com Canela):\nBrotinho/Pequena: R$ 35 - R$ 50\nMédia: R$ 50 - R$ 65\n\nOutros Itens:\nEntradas: Podem ter opções como batatas fritas, anéis de cebola (geralmente entre R$ 20 - R$ 40).\nRefrigerante Lata: R$ 6 - R$ 8\nRefrigerante 2L: R$ 12 - R$ 18\nCervejas Long Neck: R$ 10 - R$ 15"
+        },
+        {
+            "id": "qa_menu_EmporioComArte",
+            "keywords": ["Menu [Empório com Arte]", "Menu Empório com Arte", "menu Empório com Arte", "menu empório com arte"],
+            "resposta": "O Empório com Arte é conhecido por seu ambiente agradável e um cardápio variado que agrada a todos.\n\nAlmoço (Pratos Executivos):\nOpções com carne, frango ou peixe acompanhadas de guarnições selecionadas. \nValor aproximado: R$ 40 - R$ 60\n\nEntradas e Petiscos:\nBruschettas, pastéis, tábuas de frios.\nValor aproximado: R$ 30 - R$ 55\n\nPratos Principais (À la carte - Jantar):\nRisotos, Moquecas, Massas e Carnes nobres.\nValor aproximado: R$ 60 - R$ 110 por prato individual.\n\nBebidas:\nSucos, cervejas e uma boa carta de vinhos e drinks, como caipirinhas.\nDrinks: R$ 25 - R$ 40"
+        },
+        {
+            "id": "qa_menu_VoBertila",
+            "keywords": ["Menu [Vó Bertila]", "Menu Vó Bertila", "menu Vó Bertila", "menu vo bertila"],
+            "resposta": "A Vó Bertila é uma cantina italiana super tradicional e amada em Foz, famosa por suas massas artesanais e pizzas de fermentação natural.\n\nEntradas:\nArancini, Polenta Frita, Burrata.\nValor aproximado: R$ 35 - R$ 60\n\nMassas Artesanais (pratos individuais):\nLasagna, Gnocchi, Carbonara, Ravioli.\nValor aproximado: R$ 60 - R$ 95\n\nPizzas Artesanais (tamanho único, serve 2 pessoas):\nSabores clássicos e da casa.\nValor aproximado: R$ 65 - R$ 100\n\nSobremesas:\nTiramisù, Panna Cotta.\nValor aproximado: R$ 25 - R$ 40"
+        },
+        {
+            "id": "qa_menu_BonaTrattoria",
+            "keywords": ["Menu [Bona Trattoria]", "Menu Bona Trattoria", "menu Bona Trattoria", "menu bona trattoria"],
+            "resposta": "A Bona Trattoria oferece uma experiência italiana moderna e sofisticada, famosa por pratos finalizados na mesa do cliente.\n\nAntipasti (Entradas):\nCarpaccio, Burrata, Arancini Tartufo.\nValor aproximado: R$ 45 - R$ 75\n\nPrimi Piatti (Massas e Risotos):\nO famoso 'Spaghetti al Formaggio', finalizado dentro de uma roda de queijo Grana Padano, além de Gnocchi, Lasagna e Risotos.\nValor aproximado: R$ 75 - R$ 130 por prato individual.\n\nSecondi Piatti (Carnes e Peixes):\nPolvo, Mignon, Peixe do dia.\nValor aproximado: R$ 85 - R$ 150\n\nDolci (Sobremesas):\nTiramisù desconstruído, Panna Cotta.\nValor aproximado: R$ 30 - R$ 45"
+        },
+        {
+            "id": "qa_menu_BenditoBar",
+            "keywords": ["Menu [Bendito Bar]", "Menu Bendito Bar", "menu bendito bar"],
+            "resposta": "O Bendito é um bar e restaurante super alto astral, famoso por seu chopp gelado, drinks e porções generosas, ideal para ir com amigos.\n\nPetiscos e Entradas (o forte da casa):\nPorções de Isca de Tilápia, Torresmo, Bolinhos variados, Batata Frita com queijo e bacon.\nValor aproximado: R$ 45 - R$ 80 por porção.\n\nPratos Principais (muitos servem 2 pessoas):\nPicanha na Chapa, Parmegiana, Pratos com Salmão.\nValor aproximado: R$ 90 - R$ 160 por prato.\n\nBebidas:\nChopp sempre gelado, grande variedade de caipirinhas e drinks clássicos.\nChopp (300ml): R$ 10 - R$ 14\nDrinks e Caipirinhas: R$ 25 - R$ 40"
+        },
+        {
+            "id": "qa_menu_NoiteItalianaBellaItalia",
+            "keywords": ["Menu [Noite Italiana Bella Italia]", "Menu noite italiana", "menu Noite Italiana", "menu noite italiana"],
+            "resposta": "A Noite Italiana no Hotel Bella Italia é uma das experiências gastronômicas mais famosas de Foz! Funciona com um preço fixo para um buffet gigantesco.\n\nO Destaque: Mesa de Queijos\nUma mesa lendária com mais de 40 variedades de queijos nacionais e importados.\n\nBuffet Completo:\nAlém dos queijos, inclui uma vasta seleção de antepastos, saladas, pratos quentes italianos como massas frescas, lasanhas, risotos, carnes e um buffet completo de sobremesas.\n\nValor Fixo por Pessoa:\nO jantar completo custa aproximadamente R$ 160 a R$ 210 por adulto. (Crianças têm valor reduzido).\n\nObservação: Uma ampla carta de vinhos está disponível, mas as bebidas são cobradas à parte."
+        },
+        {
+            "id": "qa_menu_TajBar",
+            "keywords": ["Menu [Taj Bar]", "Menu Taj Bar", "menu Taj Bar", "menu taj bar"],
+            "resposta": "O Taj Bar é um lounge sofisticado com tema indo-asiático, conhecido pela música boa (com DJs), drinks elaborados e culinária japonesa e tailandesa.\n\nCulinária Indo-Asiática (Porções e Pratos):\nPad Thai, pratos com curry, rolinhos primavera.\nValor aproximado: R$ 60 - R$ 95\n\nSushi e Combinados:\nGrande variedade de sushis, sashimis e temakis. Combinados para uma ou mais pessoas.\nCombinados: R$ 90 - R$ 250+\nTemakis: R$ 35 - R$ 50\n\nDrinks e Cocktails (Especialidade da Casa):\nCocktails autorais, clássicos, grande variedade de gins e outras bebidas premium.\nValor aproximado: R$ 35 - R$ 55 por drink.\n\nObservação: O ambiente é de bar/lounge, e pode haver cobrança de entrada/couvert artístico em algumas noites."
+        },
+        {
+            "id": "qa_menu_LaMafia",
+            "keywords": ["Menu [La Mafia Trattoria]", "Menu La Mafia Trattoria", "menu La Mafia Trattoria", "menu la mafia trattoria"],
+            "resposta": "A La Mafia Trattoria tem um ambiente temático e divertido, servindo clássicos da cozinha italiana no sistema à la carte.\n\nAntipasti (Entradas):\nBruschettas, Carpaccio, Polenta com ragu.\nValor aproximado: R$ 40 - R$ 70\n\nPrimi Piatti (Massas e Risotos):\nLasanhas, Fettuccine com diferentes molhos, Risotos.\nValor aproximado: R$ 65 - R$ 110 por prato individual.\n\nSecondi Piatti (Carnes):\nFilé Mignon à Parmegiana, Medalhão de Mignon.\nValor aproximado: R$ 80 - R$ 140"
+        },
+        {
+            "id": "qa_menu_Hokila",
+            "keywords": ["Menu [Hokila]", "Menu Hokila", "menu Hokila", "menu hokila"],
+            "resposta": "O Hokila é um dos mais tradicionais restaurantes de culinária chinesa em Foz. Os pratos são bem servidos, ideais para compartilhar.\n\nEntradas:\nRolinho Primavera (unidade ou porção).\nValor aproximado: R$ 10 - R$ 25\n\nPratos Clássicos (servem 2-3 pessoas):\nFrango Xadrez, Carne com Brócolis, Peixe ao Molho Apimentado.\nValor aproximado: R$ 55 - R$ 95 por prato.\n\nYakisoba (serve 2-3 pessoas):\nOpções de carne, frango, misto ou vegetariano.\nValor aproximado: R$ 60 - R$ 100 por prato."
+        },
+        {
+            "id": "qa_menu_CheiroVerde",
+            "keywords": ["Menu [Cheiro Verde]", "Menu Cheiro Verde", "menu Cheiro Verde", "menu cheiro verde"],
+            "resposta": "O Cheiro Verde é um restaurante self-service por quilo, muito procurado para o almoço do dia a dia por sua grande variedade e comida caseira.\n\nSistema: Buffet por Quilo (Kg)\nVocê monta seu prato com dezenas de opções de saladas, pratos quentes da culinária brasileira e carnes na chapa (grelhados) e pesa no final.\n\nValor aproximado: R$ 65 a R$ 85 por Kg.\n(Um prato bem servido geralmente custa entre R$ 30 e R$ 50)."
+        },
+        {
+            "id": "qa_menu_CafeDoCoart",
+            "keywords": ["Menu [Café do Coart]", "Menu Café do Coart", "menu Café do Coart", "menu café do coart"],
+            "resposta": "O Café do Coart fica dentro da Cooperativa de Artesãos e é um lugar charmoso para uma pausa, um café ou um lanche da tarde.\n\nCafés e Bebidas:\nEspresso, Cappuccino, Sucos Naturais.\nValor aproximado: R$ 7 - R$ 18\n\nSalgados:\nPão de Queijo, Empadas, Tortas Salgadas, Sanduíches.\nValor aproximado: R$ 8 - R$ 20\n\nDoces e Bolos:\nBolos caseiros (fatia), Tortas Doces.\nValor aproximado: R$ 12 - R$ 22"
+        },
+        {
+            "id": "qa_menu_LaSorella",
+            "keywords": ["Menu [La Sorella]", "Menu La Sorella", "menu La Sorella", "menu la sorella"],
+            "resposta": "O La Sorella é um restaurante e churrascaria familiar que funciona com sistema de buffet livre, unindo o melhor do churrasco e da comida italiana.\n\nSistema: Buffet Livre com Churrasco\nInclui um amplo buffet de saladas, pratos quentes, massas e uma seleção de carnes servidas direto da churrasqueira.\n\nValor Fixo por Pessoa:\nO buffet completo custa aproximadamente R$ 70 a R$ 95 por adulto.\n\nObservação: Bebidas e sobremesas são geralmente cobradas à parte."
+        },
+        {
+            "id": "qa_menu_PadariaPaulistana",
+            "keywords": ["Menu [Padaria Paulistana]", "Menu Padaria Paulistana", "menu Padaria Paulistana", "menu padaria paulistana"],
+            "resposta": "A Padaria Paulistana é uma confeitaria e padaria completa, ótima para qualquer hora do dia.\n\nCafé da Manhã e Lanches:\nCafés, sucos, pão na chapa, salgados (coxinha, empada, etc) e sanduíches.\nValor aproximado: R$ 8 - R$ 25 por item.\n\nAlmoço:\nCostumam oferecer buffet self-service por quilo ou 'Prato Feito' (PF) com opções caseiras.\nValor aproximado (PF): R$ 25 - R$ 40\n\nDoces e Bolos:\nGrande variedade de tortas, bolos, docinhos e sobremesas.\nValor aproximado (Fatia): R$ 15 - R$ 25"
+        },
+        {
+            "id": "qa_menu_AtlanticaMarisqueria",
+            "keywords": ["Menu [Atlântica Restaurante & Marisqueria]", "Menu Atlântica Restaurante & Marisqueria", "menu Atlântica Restaurante & Marisqueria", "menu atlântica restaurante & marisqueria"],
+            "resposta": "Este restaurante, localizado em um hotel, é especializado em frutos do mar, com um ambiente mais requintado.\n\nEntradas:\nCasquinha de Siri, Iscas de Peixe, Camarão ao Alho e Óleo.\nValor aproximado: R$ 50 - R$ 90\n\nPratos Principais (Individuais ou para 2 pessoas):\nMoquecas, Paella, Peixe Grelhado com acompanhamentos, Pratos com Lagosta.\nValor aproximado (Individual): R$ 80 - R$ 150\nValor aproximado (Para 2 Pessoas): R$ 160 - R$ 250"
+        },
+        {
+            "id": "qa_menu_CasteloAlemao",
+            "keywords": ["Menu [Restaurante Castelo Alemão]", "Menu Restaurante Castelo Alemão", "menu Restaurante Castelo Alemão", "menu restaurante castelo alemão"],
+            "resposta": "O Castelo Alemão é um restaurante focado na culinária típica da Alemanha, uma opção diferente em Foz.\n\nPratos Típicos Alemães:\nEisbein (Joelho de Porco), Salsichões diversos com Chucrute, Marreco Recheado.\nValor aproximado por prato: R$ 75 - R$ 130\n\nApicurrasco (Tábua Mista):\nSeleção de carnes e acompanhamentos típicos, geralmente serve 2 ou mais pessoas.\nValor aproximado: R$ 150 - R$ 220\n\nBebidas:\nVariedade de chopes e cervejas, incluindo rótulos alemães.\nValor aproximado: R$ 15 - R$ 35"
+        },
+        {
+            "id": "qa_menu_AguativaPousadaHotel",
+            "keywords": ["Menu [Restaurante Aguativa Pousada Hotel]", "Menu Restaurante Aguativa Pousada Hotel", "menu Restaurante Aguativa Pousada Hotel", "menu restaurante aguativa pousada hotel"],
+            "resposta": "Atenção: O famoso Aguativa Golf Resort fica na cidade de Cornélio Procópio-PR, a muitas horas de Foz do Iguaçu. Os restaurantes do resort trabalham principalmente com um sistema de buffet completo para os hóspedes, oferecendo uma vasta gastronomia nacional e internacional. Não é uma opção para quem está visitando apenas a região de Foz."
+        },
+        {
+            "id": "qa_menu_AlfredosCaffe",
+            "keywords": ["Menu [Alfredo's Caffè Centro]", "Menu Alfredo's Caffè Centro", "menu Alfredo's Caffè Centro", "menu alfredo's caffè centro"],
+            "resposta": "O Alfredo's Caffè é um café tradicional no centro de Foz, ideal para uma pausa, um lanche rápido ou um almoço executivo.\n\nCafeteria:\nEspressos, cappuccinos, chás e chocolates.\nValor aproximado: R$ 8 - R$ 20\n\nLanches e Salgados:\nPaninis, sanduíches, empadas, croissants.\nValor aproximado: R$ 15 - R$ 35\n\nAlmoço Executivo:\nPratos do dia com opções de carne ou frango e acompanhamentos.\nValor aproximado: R$ 30 - R$ 50"
+        },
+        {
+            "id": "qa_menu_AllegroRestaurante",
+            "keywords": ["Menu [Allegro Restaurante]", "Menu Allegro Restaurante", "menu Allegro Restaurante", "menu allegro restaurante"],
+            "resposta": "O Allegro Restaurante oferece um ambiente contemporâneo com um cardápio focado na culinária italiana e mediterrânea.\n\nEntradas:\nBruschettas, Carpaccio, Saladas.\nValor aproximado: R$ 35 - R$ 60\n\nPratos Principais (Massas e Risotos):\nRisoto de funghi, Nhoque com ragu, Fettuccine com camarões.\nValor aproximado: R$ 65 - R$ 110\n\nCarnes e Peixes:\nMedalhão de Mignon, Salmão Grelhado.\nValor aproximado: R$ 80 - R$ 135"
+        },
+        {
+            "id": "qa_menu_Arapadua",
+            "keywords": ["Menu [Arapaduá Restaurante]", "Menu Arapaduá Restaurante", "menu Arapaduá Restaurante", "menu arapaduá restaurante"],
+            "resposta": "O Arapaduá é um dos principais restaurantes do Recanto Cataratas Resort. Funciona no sistema de buffet e é conhecido pela alta qualidade e variedade, incluindo noites temáticas.\n\nSistema: Buffet Livre (Jantar)\nOferece um buffet completo com ilhas de saladas, antepastos, pratos quentes da cozinha nacional e internacional, e sobremesas.\n\nValor Fixo por Pessoa:\nO buffet custa aproximadamente R$ 140 a R$ 190 por adulto.\n\nObservação: O restaurante é aberto a não-hóspedes, mas é recomendado fazer reserva. Bebidas são pagas à parte."
+        },
+        {
+            "id": "qa_menu_ArmazemGastroBeer",
+            "keywords": ["Menu [Armazém Gastro Beer]", "Menu Armazém Gastro Beer", "menu Armazém Gastro Beer", "menu armazém gastro beer"],
+            "resposta": "O Armazém Gastro Beer parece ser um gastrobar que une cervejas artesanais e pizzas. A combinação de 'Pizzaiolo Foz' indica um foco em pizzas de qualidade.\n\nPetiscos Gourmet:\nPorções de frios, bolinhos especiais, dadinhos de tapioca.\nValor aproximado: R$ 45 - R$ 80\n\nPizzas Artesanais (Individuais ou Médias):\nSabores clássicos e da casa, com massa de fermentação lenta.\nValor aproximado: R$ 60 - R$ 95\n\nBebidas:\nGrande foco em chopes e cervejas artesanais locais e nacionais.\nChopp Artesanal (400ml): R$ 15 - R$ 25"
+        },
+        {
+            "id": "qa_menu_MariasShoppingJL",
+            "keywords": ["Menu [Marias]", "Menu Marias", "menu Marias", "menu marias"],
+            "resposta": "O Restaurante Marias, localizado na praça de alimentação do Shopping JL Cataratas, geralmente opera no sistema de buffet por quilo, ideal para um almoço variado.\n\nSistema: Buffet por Quilo (Kg)\nOferece uma ampla variedade de saladas, pratos quentes da culinária brasileira, massas e carnes.\n\nValor aproximado: R$ 70 a R$ 90 por Kg.\n(Um prato bem servido geralmente custa entre R$ 35 e R$ 55)."
+        },
+        {
+            "id": "qa_menu_ARocaLanchonete",
+            "keywords": ["Menu [A Roça Lanchonete]", "Menu A Roça Lanchonete", "menu A Roça Lanchonete", "menu a roça lanchonete"],
+            "resposta": "A Roça Lanchonete tem uma proposta de comida simples e caseira, com aquele gostinho de fazenda.\n\nSalgados Tradicionais:\nPastéis, coxinhas, risoles, feitos na hora ou fritos na hora.\nValor aproximado: R$ 7 - R$ 12 por unidade.\n\nLanches:\nSanduíches simples no pão francês.\nValor aproximado: R$ 15 - R$ 25\n\nBebidas:\nSucos naturais e refrigerantes.\nValor aproximado: R$ 8 - R$ 15"
+        },
+        {
+            "id": "qa_menu_AcauaAcai",
+            "keywords": ["Menu [Acauã A Venda]", "Menu Acauã A Venda", "menu Acauã A Venda", "menu acauã a venda"],
+            "resposta": "Este local, com nome que mistura 'venda' (loja antiga) e açaí, é um especialista na fruta.\n\nCardápio Principal: Açaí na Tigela\nServido em copos ou tigelas de diferentes tamanhos (Ex: 300ml, 500ml, 700ml).\nValor aproximado: R$ 18 - R$ 35 (pode variar com os acompanhamentos).\n\nAcompanhamentos:\nFrutas (banana, morango), granola, leite em pó, leite condensado, e outros adicionais que podem ser cobrados à parte."
+        },
+        {
+            "id": "qa_menu_AcougueiraFoz",
+            "keywords": ["Menu [Açougueira Foz]", "Menu Açougueira Foz", "menu Açougueira Foz", "menu açougueira foz"],
+            "resposta": "A Açougueira Foz parece ser um local híbrido, misturando açougue com a venda de salgados fritos, como os de Goiás.\n\nCarnes: Venda de cortes de carne para levar.\n\nSalgados Fritos (Estilo Goiás):\nPastéis, empadas goianas, coxinhas com massa especial.\nValor aproximado: R$ 9 - R$ 18 por unidade.\nÉ uma opção para um lanche rápido e diferente."
+        },
+        {
+            "id": "qa_menu_AdegaDoBrinquedoteca",
+            "keywords": ["Menu [Adega do Brinquedoteca]", "Menu Adega do Brinquedoteca", "menu Adega do Brinquedoteca", "menu adega do brinquedoteca"],
+            "resposta": "Olá! Não consegui encontrar um restaurante, bar ou café com o nome 'Adega do Brinquedoteca'. A combinação de 'Adega' (local de vinhos/bebidas) e 'Brinquedoteca' (espaço infantil) é bastante incomum. Talvez o nome esteja incorreto ou seja um local privado. Você poderia confirmar o nome do estabelecimento?"
+        },
+        {
+            "id": "qa_menu_AlbertoCatai",
+            "keywords": ["Menu [Alberto Catai]", "Menu Alberto Catai", "menu Alberto Catai", "menu alberto catai"],
+            "resposta": "O restaurante Alberto Catai, no Shopping Catuaí Palladium, oferece uma experiência à la carte em um ambiente mais sofisticado que a praça de alimentação.\n\nEntradas:\nSaladas, Burrata, Carpaccio.\nValor aproximado: R$ 45 - R$ 75\n\nPratos Principais:\nFoco em carnes nobres, risotos e massas com um toque contemporâneo.\nValor aproximado: R$ 70 - R$ 130 por prato.\n\nBebidas:\nCarta de vinhos e drinks.\nTaça de Vinho: a partir de R$ 25"
+        },
+        {
+            "id": "qa_menu_AnsarAlmadina",
+            "keywords": ["Menu [Ansar Almadina]", "Menu Ansar Almadina", "menu Ansar Almadina", "menu ansar almadina"],
+            "resposta": "Este é um restaurante de cozinha árabe, que pode ser conhecido como Ansar Almadina ou A Marina. O cardápio é focado nos clássicos do Oriente Médio.\n\nSalgados Árabes:\nEsfihas (abertas e fechadas), Kibes (frito ou cru).\nValor aproximado: R$ 9 - R$ 18 por unidade.\n\nSanduíches:\nShawarma (Kebab) de carne ou frango.\nValor aproximado: R$ 30 - R$ 45\n\nPratos e Combinados:\nPratos com kafta, tabule, homus, babaganush e pão sírio.\nValor aproximado: R$ 50 - R$ 80"
+        },
+        {
+            "id": "qa_menu_Giacoffee",
+            "keywords": ["Menu [Giacoffee]", "Menu Giacoffee", "menu Giacoffee", "menu giacoffee"],
+            "resposta": "Giacoffee, pelo nome e a indicação 'Box', é um quiosque ou um pequeno café especializado em cafés para levar (to-go).\n\nCafés Especiais:\nEspresso, Americano, Macchiato.\nValor aproximado: R$ 7 - R$ 14\n\nBebidas com Leite:\nCappuccino, Latte, Mocha.\nValor aproximado: R$ 12 - R$ 20\n\nPara Acompanhar:\nCookies, brownies, pão de queijo.\nValor aproximado: R$ 8 - R$ 15"
+        },
+        {
+            "id": "qa_menu_ArenaChurrasquitos",
+            "keywords": ["Menu [Arena Churrasquitos]", "Menu Arena Churrasquitos", "menu Arena Churrasquitos", "menu arena churrasquitos"],
+            "resposta": "O Arena Churrasquitos é um bar casual especializado em espetinhos na brasa, um formato muito popular no Brasil.\n\nCardápio Principal: Espetinhos\nCarne, frango, linguiça, coração, queijo coalho, pão de alho.\nValor aproximado: R$ 10 - R$ 25 por espetinho.\n\nAcompanhamentos:\nPorções de mandioca, farofa e vinagrete.\nValor aproximado: R$ 8 - R$ 15\n\nBebidas:\nPrincipalmente cervejas de garrafa (600ml).\nValor aproximado: R$ 12 - R$ 18"
+        },
+        {
+            "id": "qa_menu_CityBier",
+            "keywords": ["Menu [CITY BIER CRAFT BEER]", "Menu CITY BIER CRAFT BEER", "menu CITY BIER CRAFT BEER", "menu city bier craft beer"],
+            "resposta": "O City Bier é um bar especializado em cervejas artesanais, ideal para quem gosta de experimentar diferentes tipos de chopp.\n\nBebidas: Chopes Artesanais\nSeleção rotativa de chopes de cervejarias locais e nacionais (IPA, APA, Pilsen, etc).\nValor aproximado (Copo 400ml): R$ 14 - R$ 28\n\nPetiscos para Harmonizar:\nBatatas fritas, anéis de cebola, tábuas de frios, hambúrgueres.\nValor aproximado: R$ 30 - R$ 60 por porção."
+        },
+        {
+            "id": "qa_menu_AcquaLounge",
+            "keywords": ["Menu [ACQUA LOUNGE]", "Menu ACQUA LOUNGE", "menu ACQUA LOUNGE", "menu acqua lounge"],
+            "resposta": "O Acqua Lounge, parte do complexo Hotel Termas, é um bar sofisticado, provavelmente perto da área das piscinas, com foco em drinks.\n\nCocktails e Drinks:\nDrinks clássicos, autorais e uma seleção de destilados premium.\nValor aproximado: R$ 35 - R$ 55 por drink.\n\nPetiscos Leves:\nCanapés, bruschettas, mini sanduíches e outras opções de finger food.\nValor aproximado: R$ 45 - R$ 75 por porção."
+        },
+        {
+            "id": "qa_menu_AguaDoceCachacaria",
+            "keywords": ["Menu [Água Doce Cachaçaria Foz]", "Menu Água Doce Cachaçaria Foz", "menu Água Doce Cachaçaria Foz", "menu água doce cachaçaria foz"],
+            "resposta": "A Água Doce é uma famosa franquia de restaurante e cachaçaria, conhecida pela comida brasileira farta e uma imensa variedade de cachaças.\n\nPratos (Porções Gigantes, servem 2-3 pessoas):\nEscondidinho de Carne Seca (o mais famoso), Filé Mignon, Picanha na Chapa.\nValor aproximado: R$ 80 - R$ 140 por prato.\n\nBebidas:\nCentenas de rótulos de cachaça e dezenas de opções de caipirinhas.\nCachaças (dose): R$ 12 - R$ 40+\nCaipirinhas: R$ 25 - R$ 45"
+        },
+        {
+            "id": "qa_menu_AquariusAvenidaParis",
+            "keywords": ["Menu [Aquarius Avenida Paris Bar]", "Menu Aquarius Avenida Paris Bar", "menu Aquarius Avenida Paris Bar", "menu aquarius avenida paris bar"],
+            "resposta": "Este é um típico bar de bairro (boteco), um lugar simples e sem frescuras para tomar uma cerveja gelada e comer um petisco.\n\nBebidas:\nCerveja de garrafa (600ml) é a principal pedida.\nValor aproximado: R$ 12 - R$ 16\n\nPorções Simples:\nCalabresa acebolada, batata frita, salame.\nValor aproximado: R$ 30 - R$ 55"
+        },
+        {
+            "id": "qa_menu_AuthenticBar",
+            "keywords": ["Menu [AUTHENTIC BAR]", "Menu AUTHENTIC BAR", "menu AUTHENTIC BAR", "menu authentic bar"],
+            "resposta": "O Authentic Bar tem uma proposta de bar moderno, com foco em drinks e, possivelmente, música ao vivo.\n\nCocktails:\nUma carta com drinks clássicos e autorais.\nValor aproximado: R$ 28 - R$ 45\n\nPetiscos e Lanches:\nPorções, mini pastéis, hambúrgueres artesanais.\nValor aproximado: R$ 40 - R$ 70\n\nObservação: Pode haver cobrança de couvert artístico em dias de música ao vivo (R$ 10 - R$ 20)."
+        },
+        {
+            "id": "qa_menu_BarBamBu",
+            "keywords": ["Menu [BAR BAM BU BAR]", "Menu BAR BAM BU BAR", "menu BAR BAM BU BAR", "menu bar bam bu bar"],
+            "resposta": "O Bar Bam Bu, localizado no complexo Hotel Termas, provavelmente tem uma temática tropical/rústica, ideal para um ambiente de resort.\n\nDrinks Tropicais:\nPiña Colada, Sex on the Beach, Batidas de Frutas.\nValor aproximado: R$ 35 - R$ 50\n\nLanches e Porções:\nSanduíches, hambúrgueres, porções de peixe frito.\nValor aproximado: R$ 45 - R$ 70"
+        },
+        {
+            "id": "qa_menu_BarAclimasIvan",
+            "keywords": ["Menu [Bar Aclimas Ivan]", "Menu Bar Aclimas Ivan", "menu Bar Aclimas Ivan", "menu bar aclimas ivan"],
+            "resposta": "Este parece ser outro bar dentro do Hotel Termas & Resort, possivelmente o bar do lobby, com um ambiente mais clássico e tranquilo.\n\nCardápio Típico de Lobby Bar:\nVinhos em taça, destilados, cafés e licores.\nValor aproximado (Taça de Vinho): R$ 28 - R$ 45\nValor aproximado (Dose de Whisky 8 anos): R$ 25 - R$ 40\n\nComidas: Opções leves como sanduíches e salgados finos."
+        },
+        {
+            "id": "qa_menu_BarCarmenMiranda",
+            "keywords": ["Menu [Bar do Carmen Miranda]", "Menu Bar do Carmen Miranda", "menu Bar do Carmen Miranda", "menu bar do carmen miranda"],
+            "resposta": "Localizado no Mabu Thermas Grand Resort, este é um bar temático em homenagem a Carmen Miranda, com um ambiente bem brasileiro e tropical.\n\nBebidas (Foco em Frutas):\nCaipirinhas especiais com frutas exóticas, cocktails coloridos.\nValor aproximado: R$ 35 - R$ 55 por drink.\n\nPetiscos Brasileiros:\nBolinhos de aipim com carne seca, pastéis, dadinhos de tapioca.\nValor aproximado: R$ 50 - R$ 85 por porção."
+        },
+        {
+            "id": "qa_menu_BareLanchoneteDJulia",
+            "keywords": ["Menu [Bar e Lanchonete D. Julia]", "Menu Bar e Lanchonete D. Julia", "menu Bar e Lanchonete D. Julia", "menu bar e lanchonete d. julia"],
+            "resposta": "O Bar da Dona Julia é um estabelecimento familiar e simples, perfeito para um almoço rápido e econômico ou um lanche.\n\nAlmoço (Prato Feito - PF):\nComida caseira com arroz, feijão, uma carne e salada.\nValor aproximado: R$ 20 - R$ 35\n\nSalgados e Lanches:\nSalgados fritos e assados, pão com bife.\nValor aproximado: R$ 6 - R$ 15"
+        },
+        {
+            "id": "qa_menu_BareSaborBrowska",
+            "keywords": ["Menu [Bar e Sabor Browska]", "Menu Bar e Sabor Browska", "menu Bar e Sabor Browska", "menu bar e sabor browska"],
+            "resposta": "Um bar de bairro que se destaca pelo 'sabor', sugerindo uma cozinha com pratos bem temperados e porções generosas.\n\nPorções da Casa:\nCarnes na chapa, frango a passarinho, peixe frito.\nValor aproximado: R$ 55 - R$ 95 (geralmente servem 2 pessoas).\n\nPrato Especial 'da Browska':\nProvavelmente um prato assinatura da casa, vale a pena perguntar qual é!\nValor aproximado: R$ 70 - R$ 110"
+        },
+        {
+            "id": "qa_menu_BelValle",
+            "keywords": ["Menu [Bel Valle Restaurante e Pizzaria]", "Menu Bel Valle Restaurante e Pizzaria", "menu Bel Valle Restaurante e Pizzaria", "menu bel valle restaurante e pizzaria"],
+            "resposta": "O Bel Valle é um restaurante familiar com dupla função: serve pratos à la carte e também é uma pizzaria.\n\nRestaurante (À la carte):\nPratos como Filé à Parmegiana, Strogonoff, Picanha.\nValor aproximado: R$ 65 - R$ 120 (alguns pratos servem 2).\n\nPizzaria (Geralmente à noite):\nGrande variedade de sabores tradicionais e especiais.\nPizza Grande (8 fatias): R$ 70 - R$ 100"
+        }, {
+            "id": "qa_menu_BestPizza",
+            "keywords": ["Menu [Best Pizza]", "Menu Best Pizza", "menu Best Pizza", "menu best pizza"],
+            "resposta": "Uma pizzaria de bairro com um nome direto, provavelmente focada em sabores populares e entrega rápida.\n\nPizza Grande (8 fatias):\nSabores Tradicionais (Calabresa, Mussarela): R$ 60 - R$ 85\nSabores Especiais: R$ 70 - R$ 95\n\nBebidas:\nRefrigerante 2L: R$ 12 - R$ 16"
+        },
+        {
+            "id": "qa_menu_CataratasBowling",
+            "keywords": ["Menu [Cataratas Bowling Center]", "Menu Cataratas Bowling Center", "menu Cataratas Bowling Center", "menu cataratas bowling center"],
+            "resposta": "Esta é a lanchonete dentro do boliche, oferecendo comida prática para quem está se divertindo.\n\nCardápio de Lanchonete:\nPizza (brotinho ou tamanho único): R$ 30 - R$ 50\nOutras Opções: Hambúrgueres, porções de batata frita, salgados.\nPorções: R$ 35 - R$ 60\n\nBebidas:\nCervejas, refrigerantes, sucos."
+        },
+        {
+            "id": "qa_menu_ChickenFanPizza",
+            "keywords": ["Menu [Chicken Fan Pizza]", "Menu Chicken Fan Pizza", "menu Chicken Fan Pizza", "menu chicken fan pizza"],
+            "resposta": "Como o nome sugere, esta pizzaria é especialista em pizzas de frango, com muitas variações criativas.\n\nEspecialidade: Pizzas de Frango\nOpções além da tradicional, como frango com bacon, com milho, ao molho barbecue, etc.\nPizza Grande (8 fatias): R$ 75 - R$ 100\n\nOutros Sabores: Também oferecem os sabores tradicionais.\nBebidas: Refrigerante 2L: R$ 12 - R$ 16"
+        },
+        {
+            "id": "qa_menu_DItaliaPizza",
+            "keywords": ["Menu [D'Itália Pizza]", "Menu D'Itália Pizza", "menu D'Itália Pizza", "menu d'itália pizza"],
+            "resposta": "Uma pizzaria com nome clássico italiano, provavelmente focada em receitas tradicionais e ambiente familiar.\n\nPizza Grande (8 fatias):\nSabores Tradicionais (Marguerita, Portuguesa): R$ 70 - R$ 95\nSabores da Casa: R$ 80 - R$ 105\n\nMassas:\nPodem oferecer opções como lasanhas e macarrão.\nValor aproximado: R$ 40 - R$ 60"
+        },
+        {
+            "id": "qa_menu_DannyPizza",
+            "keywords": ["Menu [Danny Pizza]", "Menu Danny Pizza", "menu Danny Pizza", "menu danny pizza"],
+            "resposta": "Uma típica pizzaria de bairro, com foco em entrega e um cardápio com os sabores mais pedidos pela vizinhança.\n\nPizza Grande (8 fatias):\nSabores populares a preços competitivos.\nValor aproximado: R$ 65 - R$ 90\n\nPromoções:\nFique de olho em combos de pizza + refrigerante.\nRefrigerante 2L: R$ 12 - R$ 16"
+        },
+        {
+            "id": "qa_menu_DelFornoPizzaria",
+            "keywords": ["Menu [Del Forno Pizzaria Foz]", "Menu Del Forno Pizzaria Foz", "menu Del Forno Pizzaria Foz", "menu del forno pizzaria foz"],
+            "resposta": "'Del Forno' geralmente indica que a pizzaria usa forno a lenha, um grande diferencial que deixa a pizza mais crocante e saborosa.\n\nEspecialidade: Pizza no Forno a Lenha\nPizza Grande (8 fatias): R$ 75 - R$ 110\n\nSabores Recomendados: Calabresa artesanal, ou sabores com defumados que combinam com o forno a lenha."
+        },
+        {
+            "id": "qa_menu_DonGarciaPizzaria",
+            "keywords": ["Menu [Don Garcia Pizzaria]", "Menu Don Garcia Pizzaria", "menu Don Garcia Pizzaria", "menu don garcia pizzaria"],
+            "resposta": "Com um nome que soa tradicional, a Don Garcia deve ser uma pizzaria familiar com um cardápio robusto e clássico.\n\nPizza Grande (8 fatias):\nSabores Tradicionais: R$ 70 - R$ 95\nSabores Especiais (com ingredientes como carne seca, camarão): R$ 85 - R$ 115\n\nBebidas:\nRefrigerante 2L: R$ 12 - R$ 16"
+        },
+        {
+            "id": "qa_menu_DominosPizza",
+            "keywords": ["Menu [Domino's Pizzaria Foz]", "Menu Domino's Pizzaria Foz", "menu Domino's Pizzaria Foz", "menu domino's pizzaria foz"],
+            "resposta": "A Domino's é uma grande rede internacional, conhecida por sua massa mais grossa (estilo americano) e sabores padronizados.\n\nEspecialidades Domino's:\nPepperoni, Frango com Catupiry (versão deles), Extravaganzza.\nPizza Média/Grande: R$ 70 - R$ 100\n\nOutros Itens:\nCheesebreads, sanduíches, sobremesas como o Chocobread.\n\nPromoções: O forte da marca são os combos e promoções para compra online ou no app."
+        },
+        {
+            "id": "qa_menu_ImperioPizza",
+            "keywords": ["Menu [Império Pizza]", "Menu Império Pizza", "menu Império Pizza", "menu império pizza"],
+            "resposta": "O nome 'Império' sugere uma pizzaria com um cardápio vasto, com dezenas de sabores para todos os gostos.\n\nPizza Grande (8 fatias):\nCardápio extenso com muitas combinações.\nValor aproximado: R$ 70 - R$ 105\n\nBorda Recheada: Provavelmente oferecem várias opções de recheio para a borda (Catupiry, Cheddar, etc)."
+        },
+        {
+            "id": "qa_menu_JurassicPizza",
+            "keywords": ["Menu [Jurassic Pizza]", "Menu Jurassic Pizza", "menu Jurassic Pizza", "menu jurassic pizza"],
+            "resposta": "Pizzas Salgadas:\nTradicionais (Ex: Calabresa, Mussarela, Marguerita):\nMédia: R$ 50 - R$ 70\nGrande: R$ 70 - R$ 95\nGigante/Família: R$ 90 - R$ 120\nEspeciais/Premium (Ex: Camarão, Carne Seca, Nomes Temáticos):\nMédia: R$ 65 - R$ 85\nGrande: R$ 85 - R$ 115\nGigante/Família: R$ 110 - R$ 150\nAcréscimo para borda recheada: R$ 5 a R$ 15.\n\nPizzas Doces (Ex: Chocolate, Romeu e Julieta):\nBrotinho/Pequena: R$ 35 - R$ 50\nMédia: R$ 50 - R$ 65"
+        },
+        {
+            "id": "qa_menu_LuigiPizzariaNapoletana",
+            "keywords": ["Menu [Luigi Pizzaria Napoletana]", "Menu Luigi Pizzaria Napoletana", "menu Luigi Pizzaria Napoletana", "menu luigi pizzaria napoletana"],
+            "resposta": "Esta é uma pizzaria especialista no estilo de Nápoles, Itália. A pizza napoletana é individual, com massa de longa fermentação, macia e bordas altas.\n\nEstilo: Pizza Napoletana Individual\nSabores Clássicos: Margherita (a original), Marinara.\nSabores Especiais: Com presunto de parma, burrata, etc.\n\nValor por Pizza (Individual):\nO preço é por pizza, não por tamanho compartilhado.\nValor aproximado: R$ 55 - R$ 90"
+        },
+        {
+            "id": "qa_menu_PizzariaMartignoni",
+            "keywords": ["Menu [Pizzaria Martignoni]", "Menu Pizzaria Martignoni", "menu Pizzaria Martignoni", "menu pizzaria martignoni"],
+            "resposta": "Pelo nome de família, Martignoni deve ser uma pizzaria tradicional da cidade, com receitas passadas por gerações.\n\nPizza Grande (8 fatias):\nSabores clássicos e possivelmente alguma receita especial da família 'Martignoni'.\nValor aproximado: R$ 70 - R$ 100\n\nAmbiente: Provavelmente um lugar acolhedor para ir com a família."
+        },
+        {
+            "id": "qa_menu_MegaPizzaFoz",
+            "keywords": ["Menu [Mega Pizza Foz]", "Menu Mega Pizza Foz", "menu Mega Pizza Foz", "menu mega pizza foz"],
+            "resposta": "Como diz o nome, a Mega Pizza deve ser conhecida pelos tamanhos gigantes e pela grande quantidade de recheio.\n\nEspecialidade: Tamanhos Grandes\nPizza Gigante ou Mega (12 ou mais fatias).\nValor aproximado: R$ 100 - R$ 140\n\nSabores: Devem ter opções 'Moda da Casa' com muitos ingredientes."
+        },
+        {
+            "id": "qa_menu_PizzaPeroni",
+            "keywords": ["Menu [Pizza Peroni]", "Menu Pizza Peroni", "menu Pizza Peroni", "menu pizza peroni"],
+            "resposta": "A Peroni é uma pizzaria conhecida na cidade. O nome 'Jardim Festugato' indica um de seus bairros de atuação.\n\nPizza Grande (8 fatias):\nUma pizzaria confiável para pedir os sabores que todo mundo gosta.\nValor aproximado: R$ 75 - R$ 105\n\nServiço: Provavelmente forte no delivery e retirada no balcão."
+        },
+        {
+            "id": "qa_menu_PizzaRestauranteJK",
+            "keywords": ["Menu [Pizza Restaurante]", "Menu Pizza Restaurante", "menu Pizza Restaurante", "menu pizza restaurante"],
+            "resposta": "Este é um restaurante que também serve pizza, localizado na Av. JK, 1022. É um lugar versátil para uma refeição sem muito luxo.\n\nPizza Grande (8 fatias):\nSabores básicos e diretos.\nValor aproximado: R$ 55 - R$ 80\n\nOutras Opções:\nProvavelmente serve Prato Feito (PF) no almoço e lanches.\nPF: R$ 20 - R$ 35"
+        },
+        {
+            "id": "qa_menu_PizzariaMR",
+            "keywords": ["Menu [Pizzaria MR]", "Menu Pizzaria MR", "menu Pizzaria MR", "menu pizzaria mr"],
+            "resposta": "Uma pizzaria com nome de iniciais, geralmente um negócio local focado em atender a sua região com um bom custo-benefício.\n\nPizza Grande (8 fatias):\nBom equilíbrio entre preço e qualidade.\nValor aproximado: R$ 65 - R$ 90\n\nServiço: Forte em delivery e promoções do tipo 'combo'."
+        },
+        {
+            "id": "qa_menu_PizzariaTropicana",
+            "keywords": ["Menu [Pizzaria Tropicana]", "Menu Pizzaria Tropicana", "menu Pizzaria Tropicana", "menu pizzaria tropicana"],
+            "resposta": "A Tropicana, com sua versão 'Express', sugere um restaurante principal e uma unidade focada em entregas rápidas. O nome pode indicar sabores com frutas.\n\nPizza Grande (8 fatias):\nSabores como 'Havaiana' (com abacaxi) ou 'Califórnia' podem ser destaques.\nValor aproximado: R$ 70 - R$ 95\n\nA versão Express: Ideal para delivery, com um cardápio talvez um pouco mais enxuto."
+        },
+        {
+            "id": "qa_menu_PizzariaVictoria",
+            "keywords": ["Menu [Pizzaria Victoria]", "Menu Pizzaria Victoria", "menu Pizzaria Victoria", "menu pizzaria victoria"],
+            "resposta": "Victoria é um nome clássico para pizzarias, sugerindo um lugar tradicional com os sabores que todos conhecem e amam.\n\nPizza Grande (8 fatias):\nPortuguesa, Quatro Queijos, Calabresa, Frango com Catupiry.\nValor aproximado: R$ 70 - R$ 95\n\nAmbiente: Provavelmente um salão para receber famílias e grupos."
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
+}

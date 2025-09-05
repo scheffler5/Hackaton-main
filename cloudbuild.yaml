@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '--no-cache'
+    - '-t'
+    - 'southamerica-east1-docker.pkg.dev/astute-winter-462422-v4/fozzi-repo/fozzi-app:latest'
+    - '--file=Chat/Dockerfile' 
+    - '.'                    
+images:
+- 'southamerica-east1-docker.pkg.dev/astute-winter-462422-v4/fozzi-repo/fozzi-app:latest'

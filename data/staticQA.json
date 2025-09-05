@@ -1,0 +1,16 @@
+{
+    "perguntas_respostas": [{
+            "id": "qa_pratos_tipicos_foz",
+            "keywords": ["comida tipica foz", "prato tipico foz", "Comer em foz", "gastronomia foz"],
+            "resposta": "A culinária de Foz é uma delícia e reflete a mistura da região! 😋 Não deixe de provar o Dourado assado, um peixe de rio super tradicional. O Pirá de Foz (um tipo de moqueca de peixe de rio) também é famoso. E claro, por ser fronteira, você encontra muita influência da comida paraguaia e argentina por aqui!",
+            "maps_target": null
+        },
+        {
+            "id": "qa_onde_hospedar_foz",
+            "keywords": ["melhor bairro hospedar foz", "onde ficar foz do iguaçu", "hospedagem foz localização"],
+            "resposta": "A escolha de onde se hospedar em Foz depende do seu estilo! 🏨 Muitos hotéis ficam na Avenida das Cataratas, que dá acesso fácil ao Parque Nacional e ao aeroporto. O centro da cidade também tem boas opções, com mais comércio e restaurantes por perto. Se busca resorts, também há alternativas excelentes um pouco mais afastadas.",
+            "maps_target": null
+        }
+
+    ]
+}

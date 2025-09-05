@@ -1,0 +1,36 @@
+services:
+  fozzi-nodejs:
+    build:
+      context: .
+      dockerfile: ./Chat/Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./Chat/.env
+    volumes:
+      # Persistir sessão do WhatsApp
+      - whatsapp_session:/app/session
+      # Dados locais
+      - ./data:/app/data:ro
+      - ./web-Test:/app/web-Test:ro
+      - ./roteiros:/app/roteiros:ro
+      - ./img:/app/img:ro
+    networks:
+      - fozzi-net
+    restart: unless-stopped
+    # Aumentar memória disponível para o container
+    mem_limit: 2g
+    memswap_limit: 2g
+    # Configurações de shm para Puppeteer
+    shm_size: 2gb
+    # Variáveis de ambiente específicas para Docker
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  whatsapp_session:
+    driver: local
+
+networks:
+  fozzi-net:
+    driver: bridge
